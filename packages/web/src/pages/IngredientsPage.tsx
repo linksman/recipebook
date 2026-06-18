@@ -1,22 +1,23 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { deleteIngredient, fetchIngredients, ApiError } from '../api/ingredients';
 import type { Ingredient } from '../api/ingredients';
 import IngredientList from '../components/IngredientList';
 import IngredientForm from '../components/IngredientForm';
-import { useAuth } from '../context/AuthContext';
+import Modal from '../components/Modal';
 import styles from './IngredientsPage.module.css';
 
-type Mode = { type: 'list' } | { type: 'add' } | { type: 'edit'; ingredient: Ingredient };
+type EditTarget = Ingredient | null;
 
 export default function IngredientsPage() {
-  const { logout } = useAuth();
   const [ingredients, setIngredients] = useState<Ingredient[]>([]);
-  const [mode, setMode] = useState<Mode>({ type: 'list' });
   const [loading, setLoading] = useState(true);
   const [fetchError, setFetchError] = useState('');
   const [actionError, setActionError] = useState('');
   const [search, setSearch] = useState('');
+
+  // modal state: null = closed, null value = "add" mode, Ingredient = "edit" mode
+  const [modalTarget, setModalTarget] = useState<EditTarget | undefined>(undefined);
+  const isModalOpen = modalTarget !== undefined;
 
   function loadIngredients() {
     setLoading(true);
@@ -27,9 +28,11 @@ export default function IngredientsPage() {
       .finally(() => setLoading(false));
   }
 
-  useEffect(() => {
-    loadIngredients();
-  }, []);
+  useEffect(() => { loadIngredients(); }, []);
+
+  function openAdd() { setActionError(''); setModalTarget(null); }
+  function openEdit(ing: Ingredient) { setActionError(''); setModalTarget(ing); }
+  function closeModal() { setModalTarget(undefined); }
 
   function handleSuccess(ingredient: Ingredient) {
     setIngredients((prev) => {
@@ -38,7 +41,7 @@ export default function IngredientsPage() {
         ? prev.map((i) => (i.id === ingredient.id ? ingredient : i))
         : [...prev, ingredient].sort((a, b) => a.name.localeCompare(b.name));
     });
-    setMode({ type: 'list' });
+    closeModal();
   }
 
   async function handleDelete(id: string) {
@@ -56,13 +59,8 @@ export default function IngredientsPage() {
   );
 
   return (
-    <div className={styles.page}>
-      <nav className={styles.nav}>
-        <Link to="/recipes" className={styles.navLink}>← Recipes</Link>
-        <button onClick={logout} className={styles.navLogout}>Logout</button>
-      </nav>
-
-      <div className={styles.header}>
+    <>
+      <div className={styles.pageHeader}>
         <h1 className={styles.title}>Ingredients</h1>
         <div className={styles.headerRight}>
           <input
@@ -72,29 +70,13 @@ export default function IngredientsPage() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
-          <button
-            className={styles.btnAdd}
-            onClick={() => { setMode({ type: 'add' }); setActionError(''); }}
-          >
+          <button className={styles.btnAdd} onClick={openAdd}>
             + Add Ingredient
           </button>
         </div>
       </div>
 
-      {(mode.type === 'add' || mode.type === 'edit') && (
-        <div className={styles.formCard}>
-          <h2 className={styles.formTitle}>
-            {mode.type === 'add' ? 'New Ingredient' : 'Edit Ingredient'}
-          </h2>
-          <IngredientForm
-            initial={mode.type === 'edit' ? mode.ingredient : undefined}
-            onSuccess={handleSuccess}
-            onCancel={() => setMode({ type: 'list' })}
-          />
-        </div>
-      )}
-
-      {actionError && <p className={styles.error} role="alert">{actionError}</p>}
+      {actionError && <p className={styles.actionError} role="alert">{actionError}</p>}
 
       {loading ? (
         <p className={styles.loading}>Loading…</p>
@@ -103,18 +85,30 @@ export default function IngredientsPage() {
           {fetchError}
           <button
             onClick={loadIngredients}
-            style={{ marginLeft: '1rem', background: 'none', border: '1px solid #dc2626', borderRadius: '4px', color: '#dc2626', cursor: 'pointer', padding: '0.2rem 0.5rem', fontSize: '0.8rem' }}
+            style={{ background: 'none', border: '1px solid #dc2626', borderRadius: '4px', color: '#dc2626', cursor: 'pointer', padding: '0.2rem 0.5rem', fontSize: '0.8rem', flexShrink: 0 }}
           >Retry</button>
         </div>
       ) : (
         <div className={styles.tableCard}>
           <IngredientList
             ingredients={filtered}
-            onEdit={(ing) => { setMode({ type: 'edit', ingredient: ing }); setActionError(''); }}
+            onEdit={openEdit}
             onDelete={handleDelete}
           />
         </div>
       )}
-    </div>
+
+      <Modal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        title={modalTarget ? `Edit: ${modalTarget.name}` : 'New Ingredient'}
+      >
+        <IngredientForm
+          initial={modalTarget ?? undefined}
+          onSuccess={handleSuccess}
+          onCancel={closeModal}
+        />
+      </Modal>
+    </>
   );
 }

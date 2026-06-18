@@ -1,6 +1,7 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import PrivateRoute from './components/PrivateRoute';
+import AppLayout from './components/AppLayout';
 import LoginPage from './pages/LoginPage';
 import RecipeListPage from './pages/RecipeListPage';
 import RecipeDetailPage from './pages/RecipeDetailPage';
@@ -13,45 +14,16 @@ export default function App() {
         <Routes>
           <Route path="/login" element={<LoginPage />} />
           <Route
-            path="/recipes"
             element={
               <PrivateRoute>
-                <RecipeListPage />
+                <AppLayout />
               </PrivateRoute>
             }
-          />
-          <Route
-            path="/recipes/new"
-            element={
-              <PrivateRoute>
-                <RecipeDetailPage />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path="/recipes/:id/edit"
-            element={
-              <PrivateRoute>
-                <RecipeDetailPage />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path="/recipes/:id"
-            element={
-              <PrivateRoute>
-                <RecipeDetailPage />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path="/ingredients"
-            element={
-              <PrivateRoute>
-                <IngredientsPage />
-              </PrivateRoute>
-            }
-          />
+          >
+            <Route path="/recipes" element={<RecipeListPage />} />
+            <Route path="/recipes/:id" element={<RecipeDetailPage />} />
+            <Route path="/ingredients" element={<IngredientsPage />} />
+          </Route>
           <Route path="/" element={<Navigate to="/recipes" replace />} />
         </Routes>
       </AuthProvider>

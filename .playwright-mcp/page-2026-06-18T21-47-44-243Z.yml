@@ -1,0 +1,81 @@
+- generic [ref=e17]:
+  - complementary [ref=e18]:
+    - generic [ref=e19]:
+      - generic [ref=e20]: 🍳
+      - generic [ref=e21]: RecipeBook
+    - navigation [ref=e22]:
+      - link "Recipes" [ref=e23] [cursor=pointer]:
+        - /url: /recipes
+        - img [ref=e24]
+        - generic [ref=e27]: Recipes
+      - link "Ingredients" [ref=e28] [cursor=pointer]:
+        - /url: /ingredients
+        - img [ref=e29]
+        - generic [ref=e32]: Ingredients
+    - generic [ref=e33]:
+      - generic [ref=e34]:
+        - generic [ref=e35]: A
+        - generic [ref=e36]: admin
+      - button "Log out" [ref=e37] [cursor=pointer]:
+        - img [ref=e38]
+  - main [ref=e41]:
+    - navigation [ref=e56]:
+      - link "← Recipes" [ref=e57] [cursor=pointer]:
+        - /url: /recipes
+      - generic [ref=e58]: /
+      - generic [ref=e59]: rec1
+    - generic [ref=e60]:
+      - heading "rec1" [level=1] [ref=e61]
+      - link "✎ Edit" [ref=e62] [cursor=pointer]:
+        - /url: /recipes/70539b98-6a3f-485f-8bd3-9b429a116cf8/edit
+    - generic "Nutrition summary" [ref=e63]:
+      - generic [ref=e64]:
+        - generic [ref=e65]: 📊
+        - paragraph [ref=e66]: Nutrition totals
+      - generic [ref=e67]:
+        - generic [ref=e68]:
+          - generic [ref=e69]: 🔥
+          - generic [ref=e70]: "3400"
+          - generic [ref=e71]: Calories
+        - generic [ref=e72]:
+          - generic [ref=e73]: 🌾
+          - generic [ref=e74]: 3400.0g
+          - generic [ref=e75]: Carbs
+        - generic [ref=e76]:
+          - generic [ref=e77]: 🫒
+          - generic [ref=e78]: 3400.0g
+          - generic [ref=e79]: Fat
+        - generic [ref=e80]:
+          - generic [ref=e81]: 💪
+          - generic [ref=e82]: 3400.0g
+          - generic [ref=e83]: Protein
+    - generic [ref=e84]:
+      - generic [ref=e85]:
+        - generic [ref=e86]: 🥬
+        - heading "Ingredients" [level=2] [ref=e87]
+      - table [ref=e88]:
+        - rowgroup [ref=e89]:
+          - row "Ingredient Amount Stage note" [ref=e90]:
+            - columnheader "Ingredient" [ref=e91]
+            - columnheader "Amount" [ref=e92]
+            - columnheader "Stage note" [ref=e93]
+        - rowgroup [ref=e94]:
+          - row "ing2 200 Grams —" [ref=e95]:
+            - cell "ing2" [ref=e96]
+            - cell "200 Grams" [ref=e97]
+            - cell "—" [ref=e98]
+          - row "ing1 200 Grams —" [ref=e99]:
+            - cell "ing1" [ref=e100]
+            - cell "200 Grams" [ref=e101]
+            - cell "—" [ref=e102]
+    - generic [ref=e103]:
+      - generic [ref=e104]:
+        - generic [ref=e105]: 📋
+        - heading "Steps" [level=2] [ref=e106]
+      - list [ref=e107]:
+        - listitem [ref=e108]:
+          - generic [ref=e109]: "1"
+          - generic [ref=e110]: do1
+        - listitem [ref=e111]:
+          - generic [ref=e112]: "2"
+          - generic [ref=e113]: do2

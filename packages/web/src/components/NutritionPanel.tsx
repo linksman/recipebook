@@ -8,23 +8,30 @@ interface Props {
 export default function NutritionPanel({ totals }: Props) {
   return (
     <div className={styles.panel} aria-label="Nutrition summary">
-      <p className={styles.title}>Total for entire recipe</p>
+      <div className={styles.header}>
+        <span className={styles.headerIcon}>📊</span>
+        <p className={styles.title}>Nutrition totals</p>
+      </div>
       <div className={styles.grid}>
-        <div className={styles.item}>
-          <span className={styles.value}>{totals.calories.toFixed(1)}</span>
+        <div className={`${styles.item} ${styles.itemCal}`}>
+          <span className={styles.icon}>🔥</span>
+          <span className={`${styles.value} ${styles.valueCal}`}>{totals.calories.toFixed(0)}</span>
           <span className={styles.label}>Calories</span>
         </div>
-        <div className={styles.item}>
-          <span className={styles.value}>{totals.carbs.toFixed(1)}</span>
-          <span className={styles.label}>Carbs (g)</span>
+        <div className={`${styles.item} ${styles.itemCarb}`}>
+          <span className={styles.icon}>🌾</span>
+          <span className={`${styles.value} ${styles.valueCarb}`}>{totals.carbs.toFixed(1)}g</span>
+          <span className={styles.label}>Carbs</span>
         </div>
-        <div className={styles.item}>
-          <span className={styles.value}>{totals.fat.toFixed(1)}</span>
-          <span className={styles.label}>Fat (g)</span>
+        <div className={`${styles.item} ${styles.itemFat}`}>
+          <span className={styles.icon}>🫒</span>
+          <span className={`${styles.value} ${styles.valueFat}`}>{totals.fat.toFixed(1)}g</span>
+          <span className={styles.label}>Fat</span>
         </div>
-        <div className={styles.item}>
-          <span className={styles.value}>{totals.protein.toFixed(1)}</span>
-          <span className={styles.label}>Protein (g)</span>
+        <div className={`${styles.item} ${styles.itemProt}`}>
+          <span className={styles.icon}>💪</span>
+          <span className={`${styles.value} ${styles.valueProt}`}>{totals.protein.toFixed(1)}g</span>
+          <span className={styles.label}>Protein</span>
         </div>
       </div>
     </div>

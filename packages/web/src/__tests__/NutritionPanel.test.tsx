@@ -21,15 +21,15 @@ const mockIngredients: Ingredient[] = [
 describe('NutritionPanel', () => {
   it('displays correct values for known inputs', () => {
     render(<NutritionPanel totals={{ calories: 728, carbs: 152, fat: 2, protein: 20 }} />);
-    expect(screen.getByText('728.0')).toBeInTheDocument();
-    expect(screen.getByText('152.0')).toBeInTheDocument();
-    expect(screen.getByText('2.0')).toBeInTheDocument();
-    expect(screen.getByText('20.0')).toBeInTheDocument();
+    expect(screen.getByText('728')).toBeInTheDocument();
+    expect(screen.getByText('152.0g')).toBeInTheDocument();
+    expect(screen.getByText('2.0g')).toBeInTheDocument();
+    expect(screen.getByText('20.0g')).toBeInTheDocument();
   });
 
-  it('shows "Total for entire recipe" label', () => {
+  it('shows nutrition totals label', () => {
     render(<NutritionPanel totals={{ calories: 0, carbs: 0, fat: 0, protein: 0 }} />);
-    expect(screen.getByText(/total for entire recipe/i)).toBeInTheDocument();
+    expect(screen.getByText(/nutrition totals/i)).toBeInTheDocument();
   });
 });
 
@@ -52,6 +52,6 @@ describe('RecipeForm + NutritionPanel integration', () => {
     await userEvent.type(amountInput, '100');
 
     // Panel value is computed inline on render — no await needed
-    expect(screen.getByText('400.0')).toBeInTheDocument();
+    expect(screen.getByText('400')).toBeInTheDocument();
   });
 });

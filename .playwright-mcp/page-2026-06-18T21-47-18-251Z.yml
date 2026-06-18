@@ -1,0 +1,34 @@
+- generic [ref=e17]:
+  - complementary [ref=e18]:
+    - generic [ref=e19]:
+      - generic [ref=e20]: 🍳
+      - generic [ref=e21]: RecipeBook
+    - navigation [ref=e22]:
+      - link "Recipes" [ref=e23] [cursor=pointer]:
+        - /url: /recipes
+        - img [ref=e24]
+        - generic [ref=e27]: Recipes
+      - link "Ingredients" [ref=e28] [cursor=pointer]:
+        - /url: /ingredients
+        - img [ref=e29]
+        - generic [ref=e32]: Ingredients
+    - generic [ref=e33]:
+      - generic [ref=e34]:
+        - generic [ref=e35]: A
+        - generic [ref=e36]: admin
+      - button "Log out" [ref=e37] [cursor=pointer]:
+        - img [ref=e38]
+  - main [ref=e41]:
+    - generic [ref=e42]:
+      - heading "My Recipes" [level=1] [ref=e43]
+      - link "+ New Recipe" [ref=e44] [cursor=pointer]:
+        - /url: /recipes/new
+    - link "rec1 🔥 3400 kcal 2 ingredients 2 steps ✕" [ref=e46] [cursor=pointer]:
+      - /url: /recipes/70539b98-6a3f-485f-8bd3-9b429a116cf8
+      - heading "rec1" [level=2] [ref=e49]
+      - generic [ref=e50]:
+        - generic [ref=e51]:
+          - generic [ref=e52]: 🔥 3400 kcal
+          - generic [ref=e53]: 2 ingredients
+          - generic [ref=e54]: 2 steps
+        - button "✕" [ref=e55]

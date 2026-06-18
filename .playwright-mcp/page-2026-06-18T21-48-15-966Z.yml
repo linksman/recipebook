@@ -1,0 +1,65 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]: 🍳
+      - generic [ref=e7]: RecipeBook
+    - navigation [ref=e8]:
+      - link "Recipes" [ref=e9] [cursor=pointer]:
+        - /url: /recipes
+        - img [ref=e10]
+        - generic [ref=e13]: Recipes
+      - link "Ingredients" [ref=e14] [cursor=pointer]:
+        - /url: /ingredients
+        - img [ref=e15]
+        - generic [ref=e18]: Ingredients
+    - generic [ref=e19]:
+      - generic [ref=e20]:
+        - generic [ref=e21]: A
+        - generic [ref=e22]: admin
+      - button "Log out" [ref=e23] [cursor=pointer]:
+        - img [ref=e24]
+  - main [ref=e27]:
+    - navigation [ref=e28]:
+      - link "← Recipes" [ref=e29] [cursor=pointer]:
+        - /url: /recipes
+    - generic [ref=e30]:
+      - heading "New Recipe" [level=1] [ref=e31]
+      - generic [ref=e32]:
+        - generic [ref=e33]:
+          - generic [ref=e34]: Title
+          - textbox "Title" [ref=e35]
+        - generic [ref=e36]:
+          - generic [ref=e37]: Description
+          - textbox "Description" [ref=e38]
+        - generic [ref=e39]:
+          - heading "Ingredients" [level=3] [ref=e41]
+          - paragraph [ref=e42]: No ingredients added yet.
+          - button "+ Add ingredient" [ref=e43] [cursor=pointer]
+        - generic "Nutrition summary" [ref=e44]:
+          - generic [ref=e45]:
+            - generic [ref=e46]: 📊
+            - paragraph [ref=e47]: Nutrition totals
+          - generic [ref=e48]:
+            - generic [ref=e49]:
+              - generic [ref=e50]: 🔥
+              - generic [ref=e51]: "0"
+              - generic [ref=e52]: Calories
+            - generic [ref=e53]:
+              - generic [ref=e54]: 🌾
+              - generic [ref=e55]: 0.0g
+              - generic [ref=e56]: Carbs
+            - generic [ref=e57]:
+              - generic [ref=e58]: 🫒
+              - generic [ref=e59]: 0.0g
+              - generic [ref=e60]: Fat
+            - generic [ref=e61]:
+              - generic [ref=e62]: 💪
+              - generic [ref=e63]: 0.0g
+              - generic [ref=e64]: Protein
+        - generic [ref=e65]:
+          - heading "Steps" [level=3] [ref=e67]
+          - paragraph [ref=e68]: No steps added yet.
+          - button "+ Add step" [ref=e69] [cursor=pointer]
+        - generic [ref=e70]:
+          - button "Cancel" [ref=e71] [cursor=pointer]
+          - button "Save Recipe" [ref=e72] [cursor=pointer]
