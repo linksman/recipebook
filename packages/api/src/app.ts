@@ -1,5 +1,8 @@
-import express from 'express';
+import express, { Router } from 'express';
 import session from 'express-session';
+import { requireAuth } from './middleware/auth';
+import authRouter from './routes/auth';
+import ingredientsRouter from './routes/ingredients';
 
 export function createApp() {
   const app = express();
@@ -17,6 +20,13 @@ export function createApp() {
   app.get('/health', (_req, res) => {
     res.json({ status: 'ok' });
   });
+
+  app.use('/api/auth', authRouter);
+
+  const apiRouter = Router();
+  apiRouter.use(requireAuth);
+  apiRouter.use('/ingredients', ingredientsRouter);
+  app.use('/api', apiRouter);
 
   return app;
 }

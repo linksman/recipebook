@@ -8,5 +8,6 @@ export default defineConfig({
     },
     globalSetup: './src/__tests__/globalSetup.ts',
     pool: 'forks',
+    fileParallelism: false,
   },
 });
