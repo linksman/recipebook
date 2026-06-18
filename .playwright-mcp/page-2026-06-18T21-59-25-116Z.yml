@@ -1,0 +1,65 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]: 🍳
+      - generic [ref=e7]: RecipeBook
+    - navigation [ref=e8]:
+      - link "Recipes" [ref=e9] [cursor=pointer]:
+        - /url: /recipes
+        - img [ref=e10]
+        - generic [ref=e13]: Recipes
+      - link "Ingredients" [ref=e14] [cursor=pointer]:
+        - /url: /ingredients
+        - img [ref=e15]
+        - generic [ref=e18]: Ingredients
+    - generic [ref=e19]:
+      - generic [ref=e20]:
+        - generic [ref=e21]: A
+        - generic [ref=e22]: admin
+      - button "Log out" [ref=e23] [cursor=pointer]:
+        - img [ref=e24]
+  - main [ref=e27]:
+    - generic [ref=e28]:
+      - heading "Ingredients" [level=1] [ref=e29]
+      - generic [ref=e30]:
+        - searchbox "Search…" [ref=e31]
+        - button "+ Add Ingredient" [ref=e32] [cursor=pointer]
+    - table [ref=e103]:
+      - rowgroup [ref=e104]:
+        - row "Name Unit Calories Carbs Fat Protein Actions" [ref=e105]:
+          - columnheader "Name" [ref=e106]
+          - columnheader "Unit" [ref=e107]
+          - columnheader "Calories" [ref=e108]
+          - columnheader "Carbs" [ref=e109]
+          - columnheader "Fat" [ref=e110]
+          - columnheader "Protein" [ref=e111]
+          - columnheader "Actions" [ref=e112]
+      - rowgroup [ref=e113]:
+        - row "🔒 ing1 Grams 9 9 9 9 Edit Delete" [ref=e114]:
+          - cell "🔒 ing1" [ref=e115]:
+            - generic [ref=e116]:
+              - generic "Used in a recipe — cannot be modified" [ref=e117]: 🔒
+              - text: ing1
+          - cell "Grams" [ref=e118]
+          - cell "9" [ref=e119]
+          - cell "9" [ref=e120]
+          - cell "9" [ref=e121]
+          - cell "9" [ref=e122]
+          - cell "Edit Delete" [ref=e123]:
+            - generic [ref=e124]:
+              - button "Edit" [disabled] [ref=e125]
+              - button "Delete" [disabled] [ref=e126]
+        - row "🔒 ing2 Grams 8 8 8 8 Edit Delete" [ref=e127]:
+          - cell "🔒 ing2" [ref=e128]:
+            - generic [ref=e129]:
+              - generic "Used in a recipe — cannot be modified" [ref=e130]: 🔒
+              - text: ing2
+          - cell "Grams" [ref=e131]
+          - cell "8" [ref=e132]
+          - cell "8" [ref=e133]
+          - cell "8" [ref=e134]
+          - cell "8" [ref=e135]
+          - cell "Edit Delete" [ref=e136]:
+            - generic [ref=e137]:
+              - button "Edit" [disabled] [ref=e138]
+              - button "Delete" [disabled] [ref=e139]

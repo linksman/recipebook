@@ -21,7 +21,7 @@ describe('LoginPage', () => {
     renderLoginPage(login);
     await userEvent.type(screen.getByLabelText(/username/i), 'admin');
     await userEvent.type(screen.getByLabelText(/password/i), 'wrong');
-    await userEvent.click(screen.getByRole('button', { name: /log in/i }));
+    await userEvent.click(screen.getByRole('button', { name: /sign in/i }));
     expect(await screen.findByRole('alert')).toBeInTheDocument();
   });
 
@@ -31,8 +31,8 @@ describe('LoginPage', () => {
     renderLoginPage(login);
     await userEvent.type(screen.getByLabelText(/username/i), 'admin');
     await userEvent.type(screen.getByLabelText(/password/i), 'pass');
-    await userEvent.click(screen.getByRole('button', { name: /log in/i }));
-    expect(screen.getByRole('button', { name: /logging in/i })).toBeDisabled();
+    await userEvent.click(screen.getByRole('button', { name: /sign in/i }));
+    expect(screen.getByRole('button', { name: /signing in/i })).toBeDisabled();
     resolve();
   });
 });

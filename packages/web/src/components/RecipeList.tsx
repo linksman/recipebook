@@ -14,25 +14,42 @@ function calcCalories(recipe: Recipe): number {
 }
 
 export default function RecipeList({ recipes, loading, error, onDelete }: Props) {
-  if (loading) return <p className={styles.loading}>Loading…</p>;
+  if (loading) return <p className={styles.loading}>Loading recipes…</p>;
   if (error) return <p className={styles.error} role="alert">{error}</p>;
-  if (recipes.length === 0) return <p className={styles.empty}>No recipes yet — create your first one!</p>;
+  if (recipes.length === 0) {
+    return (
+      <div className={styles.empty}>
+        <span className={styles.emptyIcon}>📖</span>
+        No recipes yet — create your first one!
+      </div>
+    );
+  }
 
   return (
     <div className={styles.grid}>
       {recipes.map((r) => (
         <Link key={r.id} to={`/recipes/${r.id}`} className={styles.card}>
-          <h2 className={styles.cardTitle}>{r.title}</h2>
-          {r.description && <p className={styles.cardDesc}>{r.description}</p>}
-          <div className={styles.cardMeta}>
-            <span>{Math.round(calcCalories(r))} kcal</span>
-            <span>{r.ingredients.length} ingredient{r.ingredients.length !== 1 ? 's' : ''}</span>
-            <span>{r.steps.length} step{r.steps.length !== 1 ? 's' : ''}</span>
+          <div className={styles.cardStripe} />
+          <div className={styles.cardBody}>
+            <h2 className={styles.cardTitle}>{r.title}</h2>
+            {r.description && <p className={styles.cardDesc}>{r.description}</p>}
+          </div>
+          <div className={styles.cardFooter}>
+            <div className={styles.cardMeta}>
+              <span className={styles.metaChipCal}>🔥 {Math.round(calcCalories(r))} kcal</span>
+              <span className={styles.metaChip}>
+                {r.ingredients.length} ingredient{r.ingredients.length !== 1 ? 's' : ''}
+              </span>
+              <span className={styles.metaChip}>
+                {r.steps.length} step{r.steps.length !== 1 ? 's' : ''}
+              </span>
+            </div>
             <button
+              className={styles.btnDelete}
               onClick={(e) => onDelete(e, r.id)}
-              style={{ marginLeft: 'auto', background: 'none', border: 'none', color: '#dc2626', cursor: 'pointer', fontSize: '0.8rem' }}
+              title="Delete recipe"
             >
-              Delete
+              ✕
             </button>
           </div>
         </Link>

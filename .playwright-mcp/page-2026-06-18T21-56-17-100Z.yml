@@ -1,0 +1,77 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]: 🍳
+      - generic [ref=e7]: RecipeBook
+    - navigation [ref=e8]:
+      - link "Recipes" [ref=e9] [cursor=pointer]:
+        - /url: /recipes
+        - img [ref=e10]
+        - generic [ref=e13]: Recipes
+      - link "Ingredients" [ref=e14] [cursor=pointer]:
+        - /url: /ingredients
+        - img [ref=e15]
+        - generic [ref=e18]: Ingredients
+    - generic [ref=e19]:
+      - generic [ref=e20]:
+        - generic [ref=e21]: A
+        - generic [ref=e22]: admin
+      - button "Log out" [ref=e23] [cursor=pointer]:
+        - img [ref=e24]
+  - main [ref=e27]:
+    - generic [ref=e28]:
+      - heading "My Recipes" [level=1] [ref=e29]
+      - button "+ New Recipe" [ref=e30] [cursor=pointer]
+    - link "rec1 🔥 3400 kcal 2 ingredients 2 steps ✕" [ref=e32] [cursor=pointer]:
+      - /url: /recipes/70539b98-6a3f-485f-8bd3-9b429a116cf8
+      - heading "rec1" [level=2] [ref=e35]
+      - generic [ref=e36]:
+        - generic [ref=e37]:
+          - generic [ref=e38]: 🔥 3400 kcal
+          - generic [ref=e39]: 2 ingredients
+          - generic [ref=e40]: 2 steps
+        - button "✕" [ref=e41]
+    - dialog "New Recipe" [ref=e42]:
+      - generic [ref=e43]:
+        - generic [ref=e44]:
+          - heading "New Recipe" [level=2] [ref=e45]
+          - button "Close modal" [active] [ref=e46] [cursor=pointer]: ✕
+        - generic [ref=e48]:
+          - generic [ref=e49]:
+            - generic [ref=e50]: Title
+            - textbox "Title" [ref=e51]
+          - generic [ref=e52]:
+            - generic [ref=e53]: Description
+            - textbox "Description" [ref=e54]
+          - generic [ref=e55]:
+            - heading "Ingredients" [level=3] [ref=e57]
+            - paragraph [ref=e58]: No ingredients added yet.
+            - button "+ Add ingredient" [ref=e59] [cursor=pointer]
+          - generic "Nutrition summary" [ref=e60]:
+            - generic [ref=e61]:
+              - generic [ref=e62]: 📊
+              - paragraph [ref=e63]: Nutrition totals
+            - generic [ref=e64]:
+              - generic [ref=e65]:
+                - generic [ref=e66]: 🔥
+                - generic [ref=e67]: "0"
+                - generic [ref=e68]: Calories
+              - generic [ref=e69]:
+                - generic [ref=e70]: 🌾
+                - generic [ref=e71]: 0.0g
+                - generic [ref=e72]: Carbs
+              - generic [ref=e73]:
+                - generic [ref=e74]: 🫒
+                - generic [ref=e75]: 0.0g
+                - generic [ref=e76]: Fat
+              - generic [ref=e77]:
+                - generic [ref=e78]: 💪
+                - generic [ref=e79]: 0.0g
+                - generic [ref=e80]: Protein
+          - generic [ref=e81]:
+            - heading "Steps" [level=3] [ref=e83]
+            - paragraph [ref=e84]: No steps added yet.
+            - button "+ Add step" [ref=e85] [cursor=pointer]
+          - generic [ref=e86]:
+            - button "Cancel" [ref=e87] [cursor=pointer]
+            - button "Save Recipe" [ref=e88] [cursor=pointer]
