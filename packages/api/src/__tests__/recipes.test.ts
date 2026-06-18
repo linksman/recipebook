@@ -195,3 +195,24 @@ describe('DELETE /api/recipes/:id', () => {
     await prisma.ingredient.delete({ where: { id: ing.id } });
   });
 });
+
+describe('Stage 5 — nutrition fields embedded in recipe response', () => {
+  it('GET /api/recipes/:id includes all *PerUnit fields on each line item', async () => {
+    const ing = await prisma.ingredient.create({
+      data: { name: 'NutIng', strictUnit: 'Grams', caloriesPerUnit: 3.64, carbsPerUnit: 0.76, fatPerUnit: 0.01, proteinPerUnit: 0.10 },
+    });
+    const agent = await makeAgent('chef1', 'pass1');
+    const create = await agent.post('/api/recipes').send(recipeBody(ing.id));
+    const res = await agent.get(`/api/recipes/${create.body.id}`);
+
+    expect(res.status).toBe(200);
+    const { ingredient } = res.body.ingredients[0];
+    expect(ingredient.caloriesPerUnit).toBe(3.64);
+    expect(ingredient.carbsPerUnit).toBe(0.76);
+    expect(ingredient.fatPerUnit).toBe(0.01);
+    expect(ingredient.proteinPerUnit).toBe(0.10);
+
+    await prisma.recipe.delete({ where: { id: create.body.id } });
+    await prisma.ingredient.delete({ where: { id: ing.id } });
+  });
+});

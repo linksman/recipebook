@@ -5,6 +5,8 @@ import type { Recipe, RecipeInput } from '../api/recipes';
 import { fetchIngredients } from '../api/ingredients';
 import type { Ingredient } from '../api/ingredients';
 import RecipeForm from '../components/RecipeForm';
+import NutritionPanel from '../components/NutritionPanel';
+import { calculateNutrition } from '../lib/nutrition';
 import styles from './RecipeDetailPage.module.css';
 
 type Mode = 'view' | 'edit' | 'create';
@@ -102,7 +104,9 @@ export default function RecipeDetailPage() {
             </table>
           )}
 
-          <h2 className={styles.sectionTitle}>Steps</h2>
+          <NutritionPanel totals={calculateNutrition(recipe.ingredients)} />
+
+          <h2 className={styles.sectionTitle} style={{ marginTop: '1.5rem' }}>Steps</h2>
           {recipe.steps.length === 0 ? (
             <p style={{ color: '#9ca3af' }}>No steps.</p>
           ) : (
