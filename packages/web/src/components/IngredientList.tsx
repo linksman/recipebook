@@ -29,21 +29,19 @@ export default function IngredientList({ ingredients, onEdit, onDelete }: Props)
         <tbody>
           {ingredients.map((ing) => (
             <tr key={ing.id}>
-              <td>
+              <td data-label="Name">
                 <span className={styles.nameCell}>
                   {ing.isLocked && (
-                    <span className={styles.lockIcon} title="Used in a recipe — cannot be modified">
-                      🔒
-                    </span>
+                    <span className={styles.lockIcon} title="Used in a recipe — cannot be modified">🔒</span>
                   )}
                   {ing.name}
                 </span>
               </td>
-              <td>{ing.strictUnit}</td>
-              <td>{ing.caloriesPerUnit}</td>
-              <td>{ing.carbsPerUnit}</td>
-              <td>{ing.fatPerUnit}</td>
-              <td>{ing.proteinPerUnit}</td>
+              <td data-label="Unit">{ing.strictUnit}</td>
+              <td data-label="Calories">{ing.caloriesPerUnit}</td>
+              <td data-label="Carbs">{ing.carbsPerUnit}</td>
+              <td data-label="Fat">{ing.fatPerUnit}</td>
+              <td data-label="Protein">{ing.proteinPerUnit}</td>
               <td>
                 <span className={styles.actions}>
                   <button
@@ -51,17 +49,13 @@ export default function IngredientList({ ingredients, onEdit, onDelete }: Props)
                     onClick={() => onEdit(ing)}
                     disabled={ing.isLocked}
                     title={ing.isLocked ? 'Used in a recipe' : 'Edit'}
-                  >
-                    Edit
-                  </button>
+                  >Edit</button>
                   <button
                     className={styles.btnDanger}
                     onClick={() => onDelete(ing.id)}
                     disabled={ing.isLocked}
                     title={ing.isLocked ? 'Used in a recipe' : 'Delete'}
-                  >
-                    Delete
-                  </button>
+                  >Delete</button>
                 </span>
               </td>
             </tr>

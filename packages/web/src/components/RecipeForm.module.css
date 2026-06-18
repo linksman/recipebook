@@ -77,10 +77,32 @@
 
 /* line item row */
 .row {
-  display: grid;
-  grid-template-columns: 1fr 100px auto auto;
+  display: flex;
+  flex-direction: column;
   gap: 0.5rem;
-  align-items: start;
+}
+
+.amountGroup {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.amountGroup input {
+  width: 90px;
+  flex-shrink: 0;
+}
+
+@media (min-width: 600px) {
+  .row {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .row > select {
+    flex: 1;
+    min-width: 0;
+  }
 }
 
 .unitTag {

@@ -149,22 +149,24 @@ export default function RecipeForm({ initialRecipe, availableIngredients, onSave
                     <option key={ing.id} value={ing.id}>{ing.name}</option>
                   ))}
                 </select>
-                <input
-                  type="number"
-                  step="any"
-                  min="0.01"
-                  aria-label={`Amount ${idx + 1}`}
-                  className={`${styles.input} ${fieldErrors[amtKey] ? styles.inputError : ''}`}
-                  value={li.amount}
-                  onChange={(e) => updateLineItem(li._key, 'amount', e.target.value)}
-                />
-                <span className={styles.unitTag}>{selected?.strictUnit ?? '—'}</span>
-                <button
-                  type="button"
-                  className={styles.btnRemove}
-                  onClick={() => removeLineItem(li._key)}
-                  aria-label="Remove ingredient"
-                >×</button>
+                <div className={styles.amountGroup}>
+                  <input
+                    type="number"
+                    step="any"
+                    min="0.01"
+                    aria-label={`Amount ${idx + 1}`}
+                    className={`${styles.input} ${fieldErrors[amtKey] ? styles.inputError : ''}`}
+                    value={li.amount}
+                    onChange={(e) => updateLineItem(li._key, 'amount', e.target.value)}
+                  />
+                  <span className={styles.unitTag}>{selected?.strictUnit ?? '—'}</span>
+                  <button
+                    type="button"
+                    className={styles.btnRemove}
+                    onClick={() => removeLineItem(li._key)}
+                    aria-label="Remove ingredient"
+                  >×</button>
+                </div>
               </div>
               <div className={styles.stageNoteRow}>
                 <input

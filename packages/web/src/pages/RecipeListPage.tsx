@@ -2,12 +2,9 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { fetchRecipes, deleteRecipe } from '../api/recipes';
 import type { Recipe } from '../api/recipes';
+import RecipeList from '../components/RecipeList';
 import { useAuth } from '../context/AuthContext';
 import styles from './RecipeListPage.module.css';
-
-function calcCalories(recipe: Recipe): number {
-  return recipe.ingredients.reduce((sum, ri) => sum + ri.amount * ri.ingredient.caloriesPerUnit, 0);
-}
 
 export default function RecipeListPage() {
   const { logout } = useAuth();
@@ -41,32 +38,7 @@ export default function RecipeListPage() {
         <Link to="/recipes/new" className={styles.btnNew}>+ New Recipe</Link>
       </div>
 
-      {loading && <p className={styles.loading}>Loading…</p>}
-      {error && <p className={styles.error}>{error}</p>}
-      {!loading && !error && recipes.length === 0 && (
-        <p className={styles.empty}>No recipes yet — create your first one!</p>
-      )}
-      {!loading && !error && recipes.length > 0 && (
-        <div className={styles.grid}>
-          {recipes.map((r) => (
-            <Link key={r.id} to={`/recipes/${r.id}`} className={styles.card}>
-              <h2 className={styles.cardTitle}>{r.title}</h2>
-              {r.description && <p className={styles.cardDesc}>{r.description}</p>}
-              <div className={styles.cardMeta}>
-                <span>{Math.round(calcCalories(r))} kcal</span>
-                <span>{r.ingredients.length} ingredient{r.ingredients.length !== 1 ? 's' : ''}</span>
-                <span>{r.steps.length} step{r.steps.length !== 1 ? 's' : ''}</span>
-                <button
-                  onClick={(e) => handleDelete(e, r.id)}
-                  style={{ marginLeft: 'auto', background: 'none', border: 'none', color: '#dc2626', cursor: 'pointer', fontSize: '0.8rem' }}
-                >
-                  Delete
-                </button>
-              </div>
-            </Link>
-          ))}
-        </div>
-      )}
+      <RecipeList recipes={recipes} loading={loading} error={error} onDelete={handleDelete} />
     </div>
   );
 }

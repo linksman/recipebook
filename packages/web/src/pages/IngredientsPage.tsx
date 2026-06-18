@@ -18,11 +18,17 @@ export default function IngredientsPage() {
   const [actionError, setActionError] = useState('');
   const [search, setSearch] = useState('');
 
-  useEffect(() => {
+  function loadIngredients() {
+    setLoading(true);
+    setFetchError('');
     fetchIngredients()
       .then(setIngredients)
       .catch(() => setFetchError('Failed to load ingredients'))
       .finally(() => setLoading(false));
+  }
+
+  useEffect(() => {
+    loadIngredients();
   }, []);
 
   function handleSuccess(ingredient: Ingredient) {
@@ -93,7 +99,13 @@ export default function IngredientsPage() {
       {loading ? (
         <p className={styles.loading}>Loading…</p>
       ) : fetchError ? (
-        <p className={styles.error}>{fetchError}</p>
+        <div className={styles.error} role="alert">
+          {fetchError}
+          <button
+            onClick={loadIngredients}
+            style={{ marginLeft: '1rem', background: 'none', border: '1px solid #dc2626', borderRadius: '4px', color: '#dc2626', cursor: 'pointer', padding: '0.2rem 0.5rem', fontSize: '0.8rem' }}
+          >Retry</button>
+        </div>
       ) : (
         <div className={styles.tableCard}>
           <IngredientList

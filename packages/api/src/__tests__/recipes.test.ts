@@ -196,6 +196,66 @@ describe('DELETE /api/recipes/:id', () => {
   });
 });
 
+describe('Stage 7 — full CRUD flow', () => {
+  it('create → GET → PUT → DELETE round-trip preserves data integrity', async () => {
+    const ing = await prisma.ingredient.create({
+      data: { name: 'CrudFlowIng', strictUnit: 'Grams', caloriesPerUnit: 4, carbsPerUnit: 0.5, fatPerUnit: 0.1, proteinPerUnit: 0.2 },
+    });
+    const agent = await makeAgent('chef1', 'pass1');
+
+    // CREATE
+    const created = await agent.post('/api/recipes').send({
+      title: 'CRUD Test Recipe',
+      description: 'Initial description',
+      ingredients: [{ ingredientId: ing.id, amount: 100, stageNote: 'First stage' }],
+      steps: [{ stepNumber: 1, text: 'Step one' }],
+    });
+    expect(created.status).toBe(201);
+    const recipeId = created.body.id;
+
+    // READ
+    const read = await agent.get(`/api/recipes/${recipeId}`);
+    expect(read.status).toBe(200);
+    expect(read.body.title).toBe('CRUD Test Recipe');
+    expect(read.body.ingredients[0].stageNote).toBe('First stage');
+
+    // UPDATE — replace ingredient list and steps
+    const updated = await agent.put(`/api/recipes/${recipeId}`).send({
+      title: 'CRUD Test Recipe (edited)',
+      description: 'Updated description',
+      ingredients: [
+        { ingredientId: ing.id, amount: 50, stageNote: 'New stage' },
+        { ingredientId: ing.id, amount: 75 },
+      ],
+      steps: [
+        { stepNumber: 1, text: 'Step one updated' },
+        { stepNumber: 2, text: 'Step two new' },
+      ],
+    });
+    expect(updated.status).toBe(200);
+    expect(updated.body.title).toBe('CRUD Test Recipe (edited)');
+    expect(updated.body.ingredients).toHaveLength(2);
+    expect(updated.body.steps).toHaveLength(2);
+
+    // Verify old stale stageNote is gone
+    const stageNotes = updated.body.ingredients.map((i: { stageNote: string | null }) => i.stageNote);
+    expect(stageNotes).not.toContain('First stage');
+
+    // Verify no orphan rows from the old version
+    const oldIngCount = await prisma.recipeIngredient.count({ where: { recipeId, stageNote: 'First stage' } });
+    expect(oldIngCount).toBe(0);
+
+    // DELETE
+    const del = await agent.delete(`/api/recipes/${recipeId}`);
+    expect(del.status).toBe(204);
+
+    const afterDel = await agent.get(`/api/recipes/${recipeId}`);
+    expect(afterDel.status).toBe(404);
+
+    await prisma.ingredient.delete({ where: { id: ing.id } });
+  });
+});
+
 describe('Stage 5 — nutrition fields embedded in recipe response', () => {
   it('GET /api/recipes/:id includes all *PerUnit fields on each line item', async () => {
     const ing = await prisma.ingredient.create({
