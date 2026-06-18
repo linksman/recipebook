@@ -3,6 +3,7 @@ import session from 'express-session';
 import { requireAuth } from './middleware/auth';
 import authRouter from './routes/auth';
 import ingredientsRouter from './routes/ingredients';
+import recipesRouter from './routes/recipes';
 
 export function createApp() {
   const app = express();
@@ -26,6 +27,7 @@ export function createApp() {
   const apiRouter = Router();
   apiRouter.use(requireAuth);
   apiRouter.use('/ingredients', ingredientsRouter);
+  apiRouter.use('/recipes', recipesRouter);
   app.use('/api', apiRouter);
 
   return app;
