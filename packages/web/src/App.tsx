@@ -3,6 +3,7 @@ import { AuthProvider } from './context/AuthContext';
 import PrivateRoute from './components/PrivateRoute';
 import LoginPage from './pages/LoginPage';
 import RecipeListPage from './pages/RecipeListPage';
+import RecipeDetailPage from './pages/RecipeDetailPage';
 import IngredientsPage from './pages/IngredientsPage';
 
 export default function App() {
@@ -16,6 +17,30 @@ export default function App() {
             element={
               <PrivateRoute>
                 <RecipeListPage />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/recipes/new"
+            element={
+              <PrivateRoute>
+                <RecipeDetailPage />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/recipes/:id/edit"
+            element={
+              <PrivateRoute>
+                <RecipeDetailPage />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/recipes/:id"
+            element={
+              <PrivateRoute>
+                <RecipeDetailPage />
               </PrivateRoute>
             }
           />

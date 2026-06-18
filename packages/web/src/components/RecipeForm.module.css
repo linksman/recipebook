@@ -1,0 +1,199 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sectionTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.input,
+.textarea,
+.select {
+  padding: 0.5rem 0.625rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  outline: none;
+  background: #fff;
+  font-family: inherit;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.input:focus,
+.textarea:focus,
+.select:focus {
+  border-color: #6366f1;
+}
+
+.inputError {
+  border-color: #dc2626;
+}
+
+.errorMsg {
+  font-size: 0.75rem;
+  color: #dc2626;
+}
+
+.banner {
+  padding: 0.625rem 0.875rem;
+  background: #fef2f2;
+  border: 1px solid #fca5a5;
+  border-radius: 6px;
+  color: #dc2626;
+  font-size: 0.875rem;
+}
+
+/* line item row */
+.row {
+  display: grid;
+  grid-template-columns: 1fr 100px auto auto;
+  gap: 0.5rem;
+  align-items: start;
+}
+
+.unitTag {
+  display: flex;
+  align-items: center;
+  height: 36px;
+  padding: 0 0.5rem;
+  background: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: #6b7280;
+  white-space: nowrap;
+}
+
+.stageNoteRow {
+  grid-column: 1 / -1;
+  padding-left: 0.5rem;
+}
+
+/* step row */
+.stepRow {
+  display: grid;
+  grid-template-columns: 32px 1fr auto;
+  gap: 0.5rem;
+  align-items: start;
+}
+
+.stepNum {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  width: 32px;
+  background: #6366f1;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.btnAdd {
+  padding: 0.35rem 0.75rem;
+  background: #fff;
+  border: 1px dashed #6366f1;
+  border-radius: 6px;
+  color: #6366f1;
+  font-size: 0.875rem;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.btnAdd:hover {
+  background: #eef2ff;
+}
+
+.btnRemove {
+  padding: 0 0.5rem;
+  height: 36px;
+  background: #fff;
+  border: 1px solid #fca5a5;
+  border-radius: 6px;
+  color: #dc2626;
+  font-size: 1rem;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.btnRemove:hover {
+  background: #fef2f2;
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+  padding-top: 0.5rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.btnPrimary {
+  padding: 0.5rem 1.25rem;
+  background: #6366f1;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btnPrimary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btnSecondary {
+  padding: 0.5rem 1.25rem;
+  background: #fff;
+  color: #374151;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.btnSecondary:hover {
+  background: #f3f4f6;
+}
+
+.empty {
+  color: #9ca3af;
+  font-size: 0.875rem;
+  font-style: italic;
+}
