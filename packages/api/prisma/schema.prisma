@@ -1,0 +1,61 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// SQLite does not support native enums; valid values: Grams | Milliliters | Units | Package
+// Enforced at the application layer (see routes/ingredients.ts)
+
+model User {
+  id           String   @id @default(uuid())
+  username     String   @unique
+  passwordHash String
+  recipes      Recipe[]
+}
+
+model Ingredient {
+  id              String             @id @default(uuid())
+  name            String             @unique
+  strictUnit      String
+  caloriesPerUnit Float
+  carbsPerUnit    Float
+  fatPerUnit      Float
+  proteinPerUnit  Float
+  recipeItems     RecipeIngredient[]
+}
+
+model Recipe {
+  id          String             @id @default(uuid())
+  userId      String
+  user        User               @relation(fields: [userId], references: [id])
+  title       String
+  description String?
+  createdAt   DateTime           @default(now())
+  updatedAt   DateTime           @updatedAt
+  ingredients RecipeIngredient[]
+  steps       RecipeStep[]
+}
+
+model RecipeIngredient {
+  id           String     @id @default(uuid())
+  recipeId     String
+  recipe       Recipe     @relation(fields: [recipeId], references: [id], onDelete: Cascade)
+  ingredientId String
+  ingredient   Ingredient @relation(fields: [ingredientId], references: [id])
+  amount       Float
+  stageNote    String?
+}
+
+model RecipeStep {
+  id         String @id @default(uuid())
+  recipeId   String
+  recipe     Recipe @relation(fields: [recipeId], references: [id], onDelete: Cascade)
+  stepNumber Int
+  text       String
+
+  @@unique([recipeId, stepNumber])
+}
