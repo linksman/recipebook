@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import type { Recipe, RecipeInput } from '../api/recipes';
 import type { Ingredient } from '../api/ingredients';
+import { calculateNutrition } from '../lib/nutrition';
+import NutritionPanel from './NutritionPanel';
 import styles from './RecipeForm.module.css';
 
 interface LineItem {
@@ -182,6 +184,16 @@ export default function RecipeForm({ initialRecipe, availableIngredients, onSave
         })}
         <button type="button" className={styles.btnAdd} onClick={addLineItem}>+ Add ingredient</button>
       </div>
+
+      {/* Nutrition panel — computed inline on every render, no useEffect */}
+      <NutritionPanel totals={calculateNutrition(
+        lineItems.flatMap((li) => {
+          const ing = availableIngredients.find((i) => i.id === li.ingredientId);
+          const amount = parseFloat(li.amount);
+          if (!ing || isNaN(amount) || amount <= 0) return [];
+          return [{ amount, ingredient: ing }];
+        })
+      )} />
 
       {/* Steps section */}
       <div className={styles.section}>
