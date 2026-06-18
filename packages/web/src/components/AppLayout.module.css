@@ -3,11 +3,17 @@
   min-height: 100vh;
 }
 
+@keyframes pageIn {
+  from { opacity: 0; transform: translateY(7px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 .main {
   flex: 1;
   min-width: 0;
   padding: 2rem 2.5rem;
   overflow-x: hidden;
+  animation: pageIn 0.24s ease;
 }
 
 @media (max-width: 768px) {

@@ -48,12 +48,13 @@
 }
 
 .title {
-  font-size: 1.75rem;
-  font-weight: 800;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 2.125rem;
+  font-weight: 600;
   margin: 0;
   color: var(--text);
-  letter-spacing: -0.025em;
-  line-height: 1.2;
+  letter-spacing: 0.005em;
+  line-height: 1.15;
 }
 
 .btnEdit {
@@ -96,7 +97,7 @@
 
 .sectionHeader {
   padding: 0.875rem 1.25rem;
-  background: #f8faff;
+  background: #f9f5ef;
   border-bottom: 1px solid var(--border);
   display: flex;
   align-items: center;
@@ -134,7 +135,7 @@
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  background: #f8faff;
+  background: #f9f5ef;
 }
 
 .ingredientTable tbody tr:last-child td {
@@ -142,7 +143,7 @@
 }
 
 .ingredientTable tbody tr:hover td {
-  background: #f8faff;
+  background: #f9f5ef;
 }
 
 /* ── Step list ── */
@@ -168,7 +169,7 @@
   flex-shrink: 0;
   width: 26px;
   height: 26px;
-  background: linear-gradient(135deg, var(--brand) 0%, var(--violet) 100%);
+  background: var(--brand);
   color: #fff;
   border-radius: 50%;
   display: flex;

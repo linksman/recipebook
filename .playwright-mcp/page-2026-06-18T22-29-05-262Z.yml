@@ -1,0 +1,254 @@
+- generic [ref=e17]:
+  - complementary [ref=e18]:
+    - generic [ref=e19]:
+      - img [ref=e21]
+      - generic [ref=e23]: RecipeBook
+    - navigation [ref=e24]:
+      - link "Recipes" [ref=e25] [cursor=pointer]:
+        - /url: /recipes
+        - img [ref=e26]
+        - generic [ref=e29]: Recipes
+      - link "Ingredients" [ref=e30] [cursor=pointer]:
+        - /url: /ingredients
+        - img [ref=e31]
+        - generic [ref=e34]: Ingredients
+    - generic [ref=e35]:
+      - generic [ref=e36]:
+        - generic [ref=e37]: A
+        - generic [ref=e38]: admin
+      - button "Log out" [ref=e39] [cursor=pointer]:
+        - img [ref=e40]
+  - main [ref=e43]:
+    - generic [ref=e44]:
+      - heading "My Recipes" [level=1] [ref=e45]
+      - button "+ New Recipe" [ref=e46] [cursor=pointer]
+    - generic [ref=e47]:
+      - link "Chocolate Chip Cookies Thick, chewy cookies with crisp edges and pools of dark chocolate throughout. 🔥 3844 kcal 6 ingredients 5 steps ✕" [ref=e48] [cursor=pointer]:
+        - /url: /recipes/413bf640-707b-47c3-a78a-dda69f1914ef
+        - generic [ref=e50]:
+          - heading "Chocolate Chip Cookies" [level=2] [ref=e51]
+          - paragraph [ref=e52]: Thick, chewy cookies with crisp edges and pools of dark chocolate throughout.
+        - generic [ref=e53]:
+          - generic [ref=e54]:
+            - generic [ref=e55]: 🔥 3844 kcal
+            - generic [ref=e56]: 6 ingredients
+            - generic [ref=e57]: 5 steps
+          - button "✕" [ref=e58]
+      - link "Lemon Yogurt Dressing A tangy, creamy dressing for grain bowls, salads, or grilled vegetables. 🔥 389 kcal 5 ingredients 4 steps ✕" [ref=e59] [cursor=pointer]:
+        - /url: /recipes/a6d5e031-d560-4f90-bfe6-0a333960c85d
+        - generic [ref=e61]:
+          - heading "Lemon Yogurt Dressing" [level=2] [ref=e62]
+          - paragraph [ref=e63]: A tangy, creamy dressing for grain bowls, salads, or grilled vegetables.
+        - generic [ref=e64]:
+          - generic [ref=e65]:
+            - generic [ref=e66]: 🔥 389 kcal
+            - generic [ref=e67]: 5 ingredients
+            - generic [ref=e68]: 4 steps
+          - button "✕" [ref=e69]
+      - link "Garlic Butter Rice Simple but deeply flavourful brown rice cooked with garlic and finished with butter. 🔥 1476 kcal 4 ingredients 5 steps ✕" [ref=e70] [cursor=pointer]:
+        - /url: /recipes/4337c9d1-c88b-4ace-aeb4-840b02270e6e
+        - generic [ref=e72]:
+          - heading "Garlic Butter Rice" [level=2] [ref=e73]
+          - paragraph [ref=e74]: Simple but deeply flavourful brown rice cooked with garlic and finished with butter.
+        - generic [ref=e75]:
+          - generic [ref=e76]:
+            - generic [ref=e77]: 🔥 1476 kcal
+            - generic [ref=e78]: 4 ingredients
+            - generic [ref=e79]: 5 steps
+          - button "✕" [ref=e80]
+      - link "Classic Crêpes Thin French crêpes suitable for sweet or savoury fillings. 🔥 979 kcal 6 ingredients 4 steps ✕" [ref=e81] [cursor=pointer]:
+        - /url: /recipes/9aaf3da9-6bd0-439b-8e38-1012410bd17d
+        - generic [ref=e83]:
+          - heading "Classic Crêpes" [level=2] [ref=e84]
+          - paragraph [ref=e85]: Thin French crêpes suitable for sweet or savoury fillings.
+        - generic [ref=e86]:
+          - generic [ref=e87]:
+            - generic [ref=e88]: 🔥 979 kcal
+            - generic [ref=e89]: 6 ingredients
+            - generic [ref=e90]: 4 steps
+          - button "✕" [ref=e91]
+      - link "Salmon Pasta Elegant yet weeknight-easy — flaked salmon with a light lemon cream sauce. 🔥 2379 kcal 6 ingredients 4 steps ✕" [ref=e92] [cursor=pointer]:
+        - /url: /recipes/15a3f43d-a61f-4df4-bc9f-45a71ace2cc5
+        - generic [ref=e94]:
+          - heading "Salmon Pasta" [level=2] [ref=e95]
+          - paragraph [ref=e96]: Elegant yet weeknight-easy — flaked salmon with a light lemon cream sauce.
+        - generic [ref=e97]:
+          - generic [ref=e98]:
+            - generic [ref=e99]: 🔥 2379 kcal
+            - generic [ref=e100]: 6 ingredients
+            - generic [ref=e101]: 4 steps
+          - button "✕" [ref=e102]
+      - link "Yogurt Honey Cake A moist, lightly sweet cake using Greek yogurt for a tender crumb and subtle tang. 🔥 1489 kcal 6 ingredients 4 steps ✕" [ref=e103] [cursor=pointer]:
+        - /url: /recipes/1df6e843-9e9f-4d15-a8f0-5d1eac845d46
+        - generic [ref=e105]:
+          - heading "Yogurt Honey Cake" [level=2] [ref=e106]
+          - paragraph [ref=e107]: A moist, lightly sweet cake using Greek yogurt for a tender crumb and subtle tang.
+        - generic [ref=e108]:
+          - generic [ref=e109]:
+            - generic [ref=e110]: 🔥 1489 kcal
+            - generic [ref=e111]: 6 ingredients
+            - generic [ref=e112]: 4 steps
+          - button "✕" [ref=e113]
+      - link "Butter Cake A classic, moist butter cake that stays fresh for days — if it lasts that long. 🔥 3687 kcal 7 ingredients 5 steps ✕" [ref=e114] [cursor=pointer]:
+        - /url: /recipes/24831e41-2bfe-4b9d-8c8d-8856a3387fd8
+        - generic [ref=e116]:
+          - heading "Butter Cake" [level=2] [ref=e117]
+          - paragraph [ref=e118]: A classic, moist butter cake that stays fresh for days — if it lasts that long.
+        - generic [ref=e119]:
+          - generic [ref=e120]:
+            - generic [ref=e121]: 🔥 3687 kcal
+            - generic [ref=e122]: 7 ingredients
+            - generic [ref=e123]: 5 steps
+          - button "✕" [ref=e124]
+      - link "Creamy Tomato Pasta A quick and comforting pasta sauce that comes together in the time the pasta takes to cook. 🔥 1906 kcal 5 ingredients 4 steps ✕" [ref=e125] [cursor=pointer]:
+        - /url: /recipes/3145851d-abf9-427d-83b3-46b6e7c04abf
+        - generic [ref=e127]:
+          - heading "Creamy Tomato Pasta" [level=2] [ref=e128]
+          - paragraph [ref=e129]: A quick and comforting pasta sauce that comes together in the time the pasta takes to cook.
+        - generic [ref=e130]:
+          - generic [ref=e131]:
+            - generic [ref=e132]: 🔥 1906 kcal
+            - generic [ref=e133]: 5 ingredients
+            - generic [ref=e134]: 4 steps
+          - button "✕" [ref=e135]
+      - link "Chicken Rice Bowl A clean, high-protein bowl with garlicky chicken over fragrant brown rice. 🔥 2036 kcal 5 ingredients 5 steps ✕" [ref=e136] [cursor=pointer]:
+        - /url: /recipes/ff343802-dc93-4c77-b069-fcbca89a2dcd
+        - generic [ref=e138]:
+          - heading "Chicken Rice Bowl" [level=2] [ref=e139]
+          - paragraph [ref=e140]: A clean, high-protein bowl with garlicky chicken over fragrant brown rice.
+        - generic [ref=e141]:
+          - generic [ref=e142]:
+            - generic [ref=e143]: 🔥 2036 kcal
+            - generic [ref=e144]: 5 ingredients
+            - generic [ref=e145]: 5 steps
+          - button "✕" [ref=e146]
+      - link "Honey Lemon Glazed Salmon Bright and sticky salmon that works equally well for a weeknight dinner or a dinner party. 🔥 1609 kcal 5 ingredients 4 steps ✕" [ref=e147] [cursor=pointer]:
+        - /url: /recipes/5768a7f7-6add-4d52-a790-f4b13f9b963c
+        - generic [ref=e149]:
+          - heading "Honey Lemon Glazed Salmon" [level=2] [ref=e150]
+          - paragraph [ref=e151]: Bright and sticky salmon that works equally well for a weeknight dinner or a dinner party.
+        - generic [ref=e152]:
+          - generic [ref=e153]:
+            - generic [ref=e154]: 🔥 1609 kcal
+            - generic [ref=e155]: 5 ingredients
+            - generic [ref=e156]: 4 steps
+          - button "✕" [ref=e157]
+      - link "Vanilla Panna Cotta Silky Italian panna cotta with a subtle vanilla flavour and honey glaze. 🔥 1735 kcal 5 ingredients 4 steps ✕" [ref=e158] [cursor=pointer]:
+        - /url: /recipes/168b7ea9-4e58-4f50-9e97-b1d020661786
+        - generic [ref=e160]:
+          - heading "Vanilla Panna Cotta" [level=2] [ref=e161]
+          - paragraph [ref=e162]: Silky Italian panna cotta with a subtle vanilla flavour and honey glaze.
+        - generic [ref=e163]:
+          - generic [ref=e164]:
+            - generic [ref=e165]: 🔥 1735 kcal
+            - generic [ref=e166]: 5 ingredients
+            - generic [ref=e167]: 4 steps
+          - button "✕" [ref=e168]
+      - link "Dark Chocolate Mousse Light, airy chocolate mousse made with just four ingredients. Chill for at least 2 hours. 🔥 2249 kcal 4 ingredients 4 steps ✕" [ref=e169] [cursor=pointer]:
+        - /url: /recipes/3bda2368-6ee8-4d8e-abe5-a4258c02d09f
+        - generic [ref=e171]:
+          - heading "Dark Chocolate Mousse" [level=2] [ref=e172]
+          - paragraph [ref=e173]: Light, airy chocolate mousse made with just four ingredients. Chill for at least 2 hours.
+        - generic [ref=e174]:
+          - generic [ref=e175]:
+            - generic [ref=e176]: 🔥 2249 kcal
+            - generic [ref=e177]: 4 ingredients
+            - generic [ref=e178]: 4 steps
+          - button "✕" [ref=e179]
+      - link "Cheesy Scrambled Eggs Slow-cooked, creamy scrambled eggs with melted cheddar — the best way to start any day. 🔥 503 kcal 4 ingredients 4 steps ✕" [ref=e180] [cursor=pointer]:
+        - /url: /recipes/645bbd92-7cf3-4b61-802d-d074386f4d16
+        - generic [ref=e182]:
+          - heading "Cheesy Scrambled Eggs" [level=2] [ref=e183]
+          - paragraph [ref=e184]: Slow-cooked, creamy scrambled eggs with melted cheddar — the best way to start any day.
+        - generic [ref=e185]:
+          - generic [ref=e186]:
+            - generic [ref=e187]: 🔥 503 kcal
+            - generic [ref=e188]: 4 ingredients
+            - generic [ref=e189]: 4 steps
+          - button "✕" [ref=e190]
+      - link "Greek Yogurt Honey Bowl A simple, protein-rich breakfast or snack bowl ready in 2 minutes. 🔥 287 kcal 3 ingredients 3 steps ✕" [ref=e191] [cursor=pointer]:
+        - /url: /recipes/88daa6a4-0c0f-49ca-ad27-8f4a9032fdcb
+        - generic [ref=e193]:
+          - heading "Greek Yogurt Honey Bowl" [level=2] [ref=e194]
+          - paragraph [ref=e195]: A simple, protein-rich breakfast or snack bowl ready in 2 minutes.
+        - generic [ref=e196]:
+          - generic [ref=e197]:
+            - generic [ref=e198]: 🔥 287 kcal
+            - generic [ref=e199]: 3 ingredients
+            - generic [ref=e200]: 3 steps
+          - button "✕" [ref=e201]
+      - link "Creamy Pasta Carbonara The authentic Roman carbonara — no cream, just eggs, cheese, and technique. 🔥 1885 kcal 4 ingredients 4 steps ✕" [ref=e202] [cursor=pointer]:
+        - /url: /recipes/0524e9f7-3d3a-42ff-af25-12269bd0ff1f
+        - generic [ref=e204]:
+          - heading "Creamy Pasta Carbonara" [level=2] [ref=e205]
+          - paragraph [ref=e206]: The authentic Roman carbonara — no cream, just eggs, cheese, and technique.
+        - generic [ref=e207]:
+          - generic [ref=e208]:
+            - generic [ref=e209]: 🔥 1885 kcal
+            - generic [ref=e210]: 4 ingredients
+            - generic [ref=e211]: 4 steps
+          - button "✕" [ref=e212]
+      - link "Chocolate Lava Cake Decadent individual chocolate cakes with a molten centre — best served immediately. 🔥 1849 kcal 5 ingredients 5 steps ✕" [ref=e213] [cursor=pointer]:
+        - /url: /recipes/61f8b41b-b43d-4947-9c75-8a38e8ba5531
+        - generic [ref=e215]:
+          - heading "Chocolate Lava Cake" [level=2] [ref=e216]
+          - paragraph [ref=e217]: Decadent individual chocolate cakes with a molten centre — best served immediately.
+        - generic [ref=e218]:
+          - generic [ref=e219]:
+            - generic [ref=e220]: 🔥 1849 kcal
+            - generic [ref=e221]: 5 ingredients
+            - generic [ref=e222]: 5 steps
+          - button "✕" [ref=e223]
+      - link "Lemon Butter Salmon Pan-seared salmon finished in a bright lemon-butter sauce — on the table in 15 minutes. 🔥 1374 kcal 4 ingredients 4 steps ✕" [ref=e224] [cursor=pointer]:
+        - /url: /recipes/0a7250d5-c5a0-4a74-8e48-4638e7a307eb
+        - generic [ref=e226]:
+          - heading "Lemon Butter Salmon" [level=2] [ref=e227]
+          - paragraph [ref=e228]: Pan-seared salmon finished in a bright lemon-butter sauce — on the table in 15 minutes.
+        - generic [ref=e229]:
+          - generic [ref=e230]:
+            - generic [ref=e231]: 🔥 1374 kcal
+            - generic [ref=e232]: 4 ingredients
+            - generic [ref=e233]: 4 steps
+          - button "✕" [ref=e234]
+      - link "Honey Garlic Chicken Sticky, sweet-savory chicken that comes together in one pan in under 25 minutes. 🔥 1367 kcal 4 ingredients 4 steps ✕" [ref=e235] [cursor=pointer]:
+        - /url: /recipes/c5314596-2558-4f24-870d-5892de47405d
+        - generic [ref=e237]:
+          - heading "Honey Garlic Chicken" [level=2] [ref=e238]
+          - paragraph [ref=e239]: Sticky, sweet-savory chicken that comes together in one pan in under 25 minutes.
+        - generic [ref=e240]:
+          - generic [ref=e241]:
+            - generic [ref=e242]: 🔥 1367 kcal
+            - generic [ref=e243]: 4 ingredients
+            - generic [ref=e244]: 4 steps
+          - button "✕" [ref=e245]
+      - link "Spaghetti Aglio e Olio A Roman classic — just pasta, garlic, olive oil, and a little patience. 🔥 1700 kcal 3 ingredients 3 steps ✕" [ref=e246] [cursor=pointer]:
+        - /url: /recipes/b33e856e-8d53-456d-9b02-9c336b429d24
+        - generic [ref=e248]:
+          - heading "Spaghetti Aglio e Olio" [level=2] [ref=e249]
+          - paragraph [ref=e250]: A Roman classic — just pasta, garlic, olive oil, and a little patience.
+        - generic [ref=e251]:
+          - generic [ref=e252]:
+            - generic [ref=e253]: 🔥 1700 kcal
+            - generic [ref=e254]: 3 ingredients
+            - generic [ref=e255]: 3 steps
+          - button "✕" [ref=e256]
+      - link "Classic Pancakes Fluffy, golden pancakes perfect for a weekend breakfast. 🔥 1361 kcal 7 ingredients 5 steps ✕" [ref=e257] [cursor=pointer]:
+        - /url: /recipes/cc5ce64c-6b39-4cc1-be1f-03d09f8c3e70
+        - generic [ref=e259]:
+          - heading "Classic Pancakes" [level=2] [ref=e260]
+          - paragraph [ref=e261]: Fluffy, golden pancakes perfect for a weekend breakfast.
+        - generic [ref=e262]:
+          - generic [ref=e263]:
+            - generic [ref=e264]: 🔥 1361 kcal
+            - generic [ref=e265]: 7 ingredients
+            - generic [ref=e266]: 5 steps
+          - button "✕" [ref=e267]
+      - link "rec1 🔥 3400 kcal 2 ingredients 2 steps ✕" [ref=e268] [cursor=pointer]:
+        - /url: /recipes/70539b98-6a3f-485f-8bd3-9b429a116cf8
+        - heading "rec1" [level=2] [ref=e271]
+        - generic [ref=e272]:
+          - generic [ref=e273]:
+            - generic [ref=e274]: 🔥 3400 kcal
+            - generic [ref=e275]: 2 ingredients
+            - generic [ref=e276]: 2 steps
+          - button "✕" [ref=e277]
