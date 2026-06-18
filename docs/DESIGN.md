@@ -106,7 +106,7 @@ Implemented via Prisma schema targeting SQLite.
 |---|---|---|
 | `id` | UUID (String) | PK |
 | `name` | String | Unique — case-sensitive |
-| `strictUnit` | Enum | Grams \| Milliliters \| Units \| Package |
+| `strictUnit` | String | Valid values: Grams \| Milliliters \| Units \| Package — enforced at the application layer (SQLite does not support native enums in Prisma) |
 | `caloriesPerUnit` | Float | ≥ 0 |
 | `carbsPerUnit` | Float | ≥ 0 |
 | `fatPerUnit` | Float | ≥ 0 |
