@@ -1,0 +1,102 @@
+- generic [ref=e17]:
+  - complementary [ref=e18]:
+    - generic [ref=e19]:
+      - img [ref=e21]
+      - generic [ref=e23]: RecipeBook
+    - navigation [ref=e24]:
+      - link "Recipes" [ref=e25] [cursor=pointer]:
+        - /url: /recipes
+        - img [ref=e26]
+        - generic [ref=e29]: Recipes
+      - link "Ingredients" [ref=e30] [cursor=pointer]:
+        - /url: /ingredients
+        - img [ref=e31]
+        - generic [ref=e34]: Ingredients
+    - generic [ref=e35]:
+      - generic [ref=e36]:
+        - generic [ref=e37]: A
+        - generic [ref=e38]: admin
+      - button "Log out" [ref=e39] [cursor=pointer]:
+        - img [ref=e40]
+  - main [ref=e43]:
+    - navigation [ref=e278]:
+      - link "← Recipes" [ref=e279] [cursor=pointer]:
+        - /url: /recipes
+      - generic [ref=e280]: /
+      - generic [ref=e281]: Chocolate Lava Cake
+    - generic [ref=e282]:
+      - heading "Chocolate Lava Cake" [level=1] [ref=e283]
+      - button "✎ Edit" [ref=e284] [cursor=pointer]
+    - paragraph [ref=e285]: Decadent individual chocolate cakes with a molten centre — best served immediately.
+    - generic "Nutrition summary" [ref=e286]:
+      - generic [ref=e287]:
+        - generic [ref=e288]: 📊
+        - paragraph [ref=e289]: Nutrition totals
+      - generic [ref=e290]:
+        - generic [ref=e291]:
+          - generic [ref=e292]: 🔥
+          - generic [ref=e293]: "1849"
+          - generic [ref=e294]: Calories
+        - generic [ref=e295]:
+          - generic [ref=e296]: 🌾
+          - generic [ref=e297]: 139.9g
+          - generic [ref=e298]: Carbs
+        - generic [ref=e299]:
+          - generic [ref=e300]: 🫒
+          - generic [ref=e301]: 131.6g
+          - generic [ref=e302]: Fat
+        - generic [ref=e303]:
+          - generic [ref=e304]: 💪
+          - generic [ref=e305]: 32.2g
+          - generic [ref=e306]: Protein
+    - generic [ref=e307]:
+      - generic [ref=e308]:
+        - generic [ref=e309]: 🥬
+        - heading "Ingredients" [level=2] [ref=e310]
+      - table [ref=e311]:
+        - rowgroup [ref=e312]:
+          - row "Ingredient Amount Stage note" [ref=e313]:
+            - columnheader "Ingredient" [ref=e314]
+            - columnheader "Amount" [ref=e315]
+            - columnheader "Stage note" [ref=e316]
+        - rowgroup [ref=e317]:
+          - row "Dark Chocolate 70% 120 Grams Melted" [ref=e318]:
+            - cell "Dark Chocolate 70%" [ref=e319]
+            - cell "120 Grams" [ref=e320]
+            - cell "Melted" [ref=e321]
+          - row "Unsalted Butter 80 Grams Melted with chocolate" [ref=e322]:
+            - cell "Unsalted Butter" [ref=e323]
+            - cell "80 Grams" [ref=e324]
+            - cell "Melted with chocolate" [ref=e325]
+          - row "White Sugar 60 Grams —" [ref=e326]:
+            - cell "White Sugar" [ref=e327]
+            - cell "60 Grams" [ref=e328]
+            - cell "—" [ref=e329]
+          - row "All-Purpose Flour 30 Grams —" [ref=e330]:
+            - cell "All-Purpose Flour" [ref=e331]
+            - cell "30 Grams" [ref=e332]
+            - cell "—" [ref=e333]
+          - row "Large Egg 3 Units —" [ref=e334]:
+            - cell "Large Egg" [ref=e335]
+            - cell "3 Units" [ref=e336]
+            - cell "—" [ref=e337]
+    - generic [ref=e338]:
+      - generic [ref=e339]:
+        - generic [ref=e340]: 📋
+        - heading "Steps" [level=2] [ref=e341]
+      - list [ref=e342]:
+        - listitem [ref=e343]:
+          - generic [ref=e344]: "1"
+          - generic [ref=e345]: Preheat oven to 220 °C. Butter and flour 4 ramekins.
+        - listitem [ref=e346]:
+          - generic [ref=e347]: "2"
+          - generic [ref=e348]: Melt chocolate and butter together over a bain-marie. Cool slightly.
+        - listitem [ref=e349]:
+          - generic [ref=e350]: "3"
+          - generic [ref=e351]: Whisk eggs and sugar until pale and thick. Fold in chocolate mixture, then flour.
+        - listitem [ref=e352]:
+          - generic [ref=e353]: "4"
+          - generic [ref=e354]: Divide batter among ramekins and bake 10–12 minutes until edges are set but centres still wobble.
+        - listitem [ref=e355]:
+          - generic [ref=e356]: "5"
+          - generic [ref=e357]: Rest 1 minute, then invert onto plates and serve immediately.

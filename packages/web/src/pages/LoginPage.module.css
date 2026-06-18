@@ -3,41 +3,51 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 45%, #4c1d95 100%);
+  background-color: #16100a;
+  background-image:
+    radial-gradient(ellipse 90% 65% at 50% 110%, rgba(184,76,40,.22) 0%, transparent 65%),
+    radial-gradient(circle, rgba(255,255,255,.018) 1px, transparent 1px);
+  background-size: auto, 20px 20px;
   padding: 1.5rem;
 }
 
 .card {
-  background: #fff;
+  background: var(--surface);
   border-radius: var(--radius-lg);
-  padding: 2.5rem;
+  padding: 3rem 2.5rem 2.75rem;
   width: 100%;
-  max-width: 400px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  max-width: 390px;
+  box-shadow: 0 32px 80px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.04);
 }
 
 .brandArea {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 2.25rem;
 }
 
 .logoIcon {
-  font-size: 3rem;
+  font-size: 2.25rem;
   display: block;
-  margin-bottom: 0.625rem;
+  margin-bottom: 0.875rem;
+  line-height: 1;
 }
 
 .title {
-  font-size: 1.75rem;
-  font-weight: 800;
-  color: #1e1b4b;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 2.75rem;
+  font-weight: 600;
+  color: var(--brand);
   margin: 0 0 0.375rem;
-  letter-spacing: -0.02em;
+  line-height: 1;
+  letter-spacing: 0.01em;
 }
 
 .tagline {
-  font-size: 0.875rem;
-  color: var(--text-muted);
+  font-size: 0.82rem;
+  color: var(--text-light);
+  font-weight: 400;
+  letter-spacing: 0.01em;
 }
 
 .form {
@@ -53,11 +63,11 @@
 }
 
 .label {
-  font-size: 0.8rem;
+  font-size: 0.72rem;
   font-weight: 600;
   color: var(--text-muted);
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.07em;
 }
 
 .input {
@@ -73,36 +83,39 @@
 
 .input:focus {
   border-color: var(--brand);
-  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+  box-shadow: 0 0 0 3px rgba(184,76,40,.12);
 }
 
 .btn {
-  padding: 0.7rem;
-  background: linear-gradient(135deg, var(--brand) 0%, var(--violet) 100%);
+  padding: 0.75rem;
+  background: var(--brand);
   color: #fff;
   border: none;
   border-radius: var(--radius);
-  font-size: 0.95rem;
-  font-weight: 700;
+  font-size: 0.9rem;
+  font-weight: 600;
   cursor: pointer;
   margin-top: 0.375rem;
-  transition: opacity 0.15s, transform 0.1s;
-  letter-spacing: 0.01em;
+  transition: background 0.15s, transform 0.1s, box-shadow 0.15s;
+  letter-spacing: 0.03em;
+  box-shadow: 0 2px 10px rgba(184,76,40,.3);
 }
 
 .btn:hover:not(:disabled) {
-  opacity: 0.92;
+  background: var(--brand-dark);
   transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(184,76,40,.38);
 }
 
 .btn:disabled {
-  opacity: 0.55;
+  opacity: 0.5;
   cursor: not-allowed;
   transform: none;
+  box-shadow: none;
 }
 
 .error {
-  padding: 0.6rem 0.75rem;
+  padding: 0.625rem 0.875rem;
   background: var(--danger-bg);
   border: 1px solid var(--danger-border);
   border-radius: var(--radius-sm);
