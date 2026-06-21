@@ -15,7 +15,7 @@ The **Recipe Planner** is a digital tool designed to help users document recipes
 
 ---
 
-## 3. Functional Requirements 
+## 3. Functional Requirements
 
 ### 3.1 User Authentication (MVP Stage)
 * **FR-1.1:** The system must restrict application access via a login screen.
