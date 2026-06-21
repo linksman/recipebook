@@ -3,12 +3,9 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
-
-// SQLite does not support native enums; valid values: Grams | Milliliters | Units | Package
-// Enforced at the application layer (see routes/ingredients.ts)
 
 model User {
   id           String   @id @default(uuid())

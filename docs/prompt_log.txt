@@ -5,3 +5,4 @@
 [2026-06-21T07:48:11Z] ok. I  now have 'hobby' plan on railways. how to deploy?
 [2026-06-21T07:53:22Z] start over.. I  now have 'hobby' plan on railways. how to deploy?
 [2026-06-21T07:55:10Z] go ahead
+[2026-06-21T08:05:50Z] I can't add an sqlite. I'll go for the postgresql option
