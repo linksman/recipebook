@@ -1,3 +1,7 @@
 [2026-06-21T06:12:27Z] test the prompt logging
 [2026-06-21T07:14:25Z] move all images to a designated folder. update references.
 [2026-06-21T07:20:19Z] so, no. Images belong under the frontend project
+[2026-06-21T07:43:11Z] what's the best non-aws option to deploy this project? rails? vercel?
+[2026-06-21T07:48:11Z] ok. I  now have 'hobby' plan on railways. how to deploy?
+[2026-06-21T07:53:22Z] start over.. I  now have 'hobby' plan on railways. how to deploy?
+[2026-06-21T07:55:10Z] go ahead

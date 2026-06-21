@@ -1,5 +1,6 @@
 import express, { Router } from 'express';
 import session from 'express-session';
+import path from 'path';
 import { requireAuth } from './middleware/auth';
 import authRouter from './routes/auth';
 import ingredientsRouter from './routes/ingredients';
@@ -14,7 +15,7 @@ export function createApp() {
       secret: process.env.SESSION_SECRET ?? 'dev-secret',
       resave: false,
       saveUninitialized: false,
-      cookie: { secure: false },
+      cookie: { secure: process.env.NODE_ENV === 'production' },
     })
   );
 
@@ -29,6 +30,12 @@ export function createApp() {
   apiRouter.use('/ingredients', ingredientsRouter);
   apiRouter.use('/recipes', recipesRouter);
   app.use('/api', apiRouter);
+
+  if (process.env.NODE_ENV === 'production') {
+    const webDist = path.join(__dirname, '../../web/dist');
+    app.use(express.static(webDist));
+    app.get('*', (_req, res) => res.sendFile(path.join(webDist, 'index.html')));
+  }
 
   return app;
 }

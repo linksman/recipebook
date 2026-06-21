@@ -9,6 +9,8 @@
     "dev:web": "npm run dev --workspace=packages/web",
     "test:api": "npm run test --workspace=packages/api",
     "test:web": "npm run test --workspace=packages/web",
-    "test": "npm run test:api && npm run test:web"
+    "test": "npm run test:api && npm run test:web",
+    "build": "npm run build --workspace=packages/web && npm run build --workspace=packages/api",
+    "start": "npm run start --workspace=packages/api"
   }
 }
