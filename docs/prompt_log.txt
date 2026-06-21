@@ -7,3 +7,4 @@
 [2026-06-21T07:55:10Z] go ahead
 [2026-06-21T08:05:50Z] I can't add an sqlite. I'll go for the postgresql option
 [2026-06-21T08:17:43Z] can you connect to railways to see why the deploy failed? I'm deploying using github linkage
+[2026-06-21T08:20:01Z] failed again
