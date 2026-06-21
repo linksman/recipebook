@@ -1,0 +1,613 @@
+- generic [ref=e17]:
+  - complementary [ref=e18]:
+    - generic [ref=e19]:
+      - img [ref=e21]
+      - generic [ref=e23]: Recipe Planner
+    - navigation [ref=e24]:
+      - link "Dashboard" [ref=e25] [cursor=pointer]:
+        - /url: /recipes
+        - img [ref=e26]
+        - generic [ref=e31]: Dashboard
+      - link "My Recipes" [ref=e32] [cursor=pointer]:
+        - /url: /recipes
+        - img [ref=e33]
+        - generic [ref=e36]: My Recipes
+      - link "Ingredients Library" [ref=e37] [cursor=pointer]:
+        - /url: /ingredients
+        - img [ref=e38]
+        - generic [ref=e41]: Ingredients Library
+      - generic:
+        - img
+        - generic: Meal Plan
+      - generic:
+        - img
+        - generic: Grocery List
+    - generic [ref=e42]:
+      - generic [ref=e43]:
+        - generic [ref=e44]: A
+        - generic [ref=e45]: admin
+      - button "Log out" [ref=e46] [cursor=pointer]:
+        - img [ref=e47]
+  - main [ref=e50]:
+    - generic [ref=e51]:
+      - heading "Recipe Planner – My Culinary Collection" [level=1] [ref=e52]
+      - generic [ref=e53]:
+        - generic [ref=e54]:
+          - generic:
+            - img
+          - searchbox "Search recipes…" [ref=e55]
+        - button "Create New Recipe" [ref=e56] [cursor=pointer]
+    - generic [ref=e57]:
+      - generic [ref=e58]:
+        - img "Chocolate Chip Cookies" [ref=e60]
+        - generic [ref=e61]:
+          - heading "Chocolate Chip Cookies" [level=2] [ref=e62]
+          - paragraph [ref=e63]: Thick, chewy cookies with crisp edges and pools of dark chocolate throughout.
+          - generic [ref=e64]:
+            - generic [ref=e65]:
+              - generic [ref=e66]: "3843.6"
+              - generic [ref=e68]: Calories
+            - generic [ref=e69]:
+              - generic [ref=e70]: "403.5"
+              - generic [ref=e72]: Carbs
+            - generic [ref=e73]:
+              - generic [ref=e74]: "227.3"
+              - generic [ref=e76]: Fat
+            - generic [ref=e77]:
+              - generic [ref=e78]: "50.7"
+              - generic [ref=e80]: Protein
+        - generic [ref=e81]:
+          - button "View" [ref=e82] [cursor=pointer]:
+            - img [ref=e83]
+            - text: View
+          - button "Edit" [ref=e86] [cursor=pointer]:
+            - img [ref=e87]
+            - text: Edit
+          - button "Delete" [ref=e90] [cursor=pointer]:
+            - img [ref=e91]
+            - text: Delete
+      - generic [ref=e95]:
+        - img "Lemon Yogurt Dressing" [ref=e97]
+        - generic [ref=e98]:
+          - heading "Lemon Yogurt Dressing" [level=2] [ref=e99]
+          - paragraph [ref=e100]: A tangy, creamy dressing for grain bowls, salads, or grilled vegetables.
+          - generic [ref=e101]:
+            - generic [ref=e102]:
+              - generic [ref=e103]: "389.4"
+              - generic [ref=e105]: Calories
+            - generic [ref=e106]:
+              - generic [ref=e107]: "24.7"
+              - generic [ref=e109]: Carbs
+            - generic [ref=e110]:
+              - generic [ref=e111]: "27.7"
+              - generic [ref=e113]: Fat
+            - generic [ref=e114]:
+              - generic [ref=e115]: "15.8"
+              - generic [ref=e117]: Protein
+        - generic [ref=e118]:
+          - button "View" [ref=e119] [cursor=pointer]:
+            - img [ref=e120]
+            - text: View
+          - button "Edit" [ref=e123] [cursor=pointer]:
+            - img [ref=e124]
+            - text: Edit
+          - button "Delete" [ref=e127] [cursor=pointer]:
+            - img [ref=e128]
+            - text: Delete
+      - generic [ref=e132]:
+        - img "Garlic Butter Rice" [ref=e134]
+        - generic [ref=e135]:
+          - heading "Garlic Butter Rice" [level=2] [ref=e136]
+          - paragraph [ref=e137]: Simple but deeply flavourful brown rice cooked with garlic and finished with butter.
+          - generic [ref=e138]:
+            - generic [ref=e139]:
+              - generic [ref=e140]: "1475.7"
+              - generic [ref=e142]: Calories
+            - generic [ref=e143]:
+              - generic [ref=e144]: "235.3"
+              - generic [ref=e146]: Carbs
+            - generic [ref=e147]:
+              - generic [ref=e148]: "48.4"
+              - generic [ref=e150]: Fat
+            - generic [ref=e151]:
+              - generic [ref=e152]: "25.1"
+              - generic [ref=e154]: Protein
+        - generic [ref=e155]:
+          - button "View" [ref=e156] [cursor=pointer]:
+            - img [ref=e157]
+            - text: View
+          - button "Edit" [ref=e160] [cursor=pointer]:
+            - img [ref=e161]
+            - text: Edit
+          - button "Delete" [ref=e164] [cursor=pointer]:
+            - img [ref=e165]
+            - text: Delete
+      - generic [ref=e169]:
+        - img "Classic Crêpes" [ref=e171]
+        - generic [ref=e172]:
+          - heading "Classic Crêpes" [level=2] [ref=e173]
+          - paragraph [ref=e174]: Thin French crêpes suitable for sweet or savoury fillings.
+          - generic [ref=e175]:
+            - generic [ref=e176]:
+              - generic [ref=e177]: "978.5"
+              - generic [ref=e179]: Calories
+            - generic [ref=e180]:
+              - generic [ref=e181]: "121.6"
+              - generic [ref=e183]: Carbs
+            - generic [ref=e184]:
+              - generic [ref=e185]: "36.4"
+              - generic [ref=e187]: Fat
+            - generic [ref=e188]:
+              - generic [ref=e189]: "34.3"
+              - generic [ref=e191]: Protein
+        - generic [ref=e192]:
+          - button "View" [ref=e193] [cursor=pointer]:
+            - img [ref=e194]
+            - text: View
+          - button "Edit" [ref=e197] [cursor=pointer]:
+            - img [ref=e198]
+            - text: Edit
+          - button "Delete" [ref=e201] [cursor=pointer]:
+            - img [ref=e202]
+            - text: Delete
+      - generic [ref=e206]:
+        - img "Salmon Pasta" [ref=e208]
+        - generic [ref=e209]:
+          - heading "Salmon Pasta" [level=2] [ref=e210]
+          - paragraph [ref=e211]: Elegant yet weeknight-easy — flaked salmon with a light lemon cream sauce.
+          - generic [ref=e212]:
+            - generic [ref=e213]:
+              - generic [ref=e214]: "2378.9"
+              - generic [ref=e216]: Calories
+            - generic [ref=e217]:
+              - generic [ref=e218]: "210.2"
+              - generic [ref=e220]: Carbs
+            - generic [ref=e221]:
+              - generic [ref=e222]: "113.8"
+              - generic [ref=e224]: Fat
+            - generic [ref=e225]:
+              - generic [ref=e226]: "119.6"
+              - generic [ref=e228]: Protein
+        - generic [ref=e229]:
+          - button "View" [ref=e230] [cursor=pointer]:
+            - img [ref=e231]
+            - text: View
+          - button "Edit" [ref=e234] [cursor=pointer]:
+            - img [ref=e235]
+            - text: Edit
+          - button "Delete" [ref=e238] [cursor=pointer]:
+            - img [ref=e239]
+            - text: Delete
+      - generic [ref=e243]:
+        - img "Yogurt Honey Cake" [ref=e245]
+        - generic [ref=e246]:
+          - heading "Yogurt Honey Cake" [level=2] [ref=e247]
+          - paragraph [ref=e248]: A moist, lightly sweet cake using Greek yogurt for a tender crumb and subtle tang.
+          - generic [ref=e249]:
+            - generic [ref=e250]:
+              - generic [ref=e251]: "1489.0"
+              - generic [ref=e253]: Calories
+            - generic [ref=e254]:
+              - generic [ref=e255]: "256.6"
+              - generic [ref=e257]: Carbs
+            - generic [ref=e258]:
+              - generic [ref=e259]: "26.8"
+              - generic [ref=e261]: Fat
+            - generic [ref=e262]:
+              - generic [ref=e263]: "56.8"
+              - generic [ref=e265]: Protein
+        - generic [ref=e266]:
+          - button "View" [ref=e267] [cursor=pointer]:
+            - img [ref=e268]
+            - text: View
+          - button "Edit" [ref=e271] [cursor=pointer]:
+            - img [ref=e272]
+            - text: Edit
+          - button "Delete" [ref=e275] [cursor=pointer]:
+            - img [ref=e276]
+            - text: Delete
+      - generic [ref=e280]:
+        - img "Butter Cake" [ref=e282]
+        - generic [ref=e283]:
+          - heading "Butter Cake" [level=2] [ref=e284]
+          - paragraph [ref=e285]: A classic, moist butter cake that stays fresh for days — if it lasts that long.
+          - generic [ref=e286]:
+            - generic [ref=e287]:
+              - generic [ref=e288]: "3686.6"
+              - generic [ref=e290]: Calories
+            - generic [ref=e291]:
+              - generic [ref=e292]: "415.0"
+              - generic [ref=e294]: Carbs
+            - generic [ref=e295]:
+              - generic [ref=e296]: "206.3"
+              - generic [ref=e298]: Fat
+            - generic [ref=e299]:
+              - generic [ref=e300]: "51.7"
+              - generic [ref=e302]: Protein
+        - generic [ref=e303]:
+          - button "View" [ref=e304] [cursor=pointer]:
+            - img [ref=e305]
+            - text: View
+          - button "Edit" [ref=e308] [cursor=pointer]:
+            - img [ref=e309]
+            - text: Edit
+          - button "Delete" [ref=e312] [cursor=pointer]:
+            - img [ref=e313]
+            - text: Delete
+      - generic [ref=e317]:
+        - img "Creamy Tomato Pasta" [ref=e319]
+        - generic [ref=e320]:
+          - heading "Creamy Tomato Pasta" [level=2] [ref=e321]
+          - paragraph [ref=e322]: A quick and comforting pasta sauce that comes together in the time the pasta takes to cook.
+          - generic [ref=e323]:
+            - generic [ref=e324]:
+              - generic [ref=e325]: "1905.6"
+              - generic [ref=e327]: Calories
+            - generic [ref=e328]:
+              - generic [ref=e329]: "250.8"
+              - generic [ref=e331]: Carbs
+            - generic [ref=e332]:
+              - generic [ref=e333]: "79.7"
+              - generic [ref=e335]: Fat
+            - generic [ref=e336]:
+              - generic [ref=e337]: "48.8"
+              - generic [ref=e339]: Protein
+        - generic [ref=e340]:
+          - button "View" [ref=e341] [cursor=pointer]:
+            - img [ref=e342]
+            - text: View
+          - button "Edit" [ref=e345] [cursor=pointer]:
+            - img [ref=e346]
+            - text: Edit
+          - button "Delete" [ref=e349] [cursor=pointer]:
+            - img [ref=e350]
+            - text: Delete
+      - generic [ref=e354]:
+        - img "Chicken Rice Bowl" [ref=e356]
+        - generic [ref=e357]:
+          - heading "Chicken Rice Bowl" [level=2] [ref=e358]
+          - paragraph [ref=e359]: A clean, high-protein bowl with garlicky chicken over fragrant brown rice.
+          - generic [ref=e360]:
+            - generic [ref=e361]:
+              - generic [ref=e362]: "2036"
+              - generic [ref=e364]: Calories
+            - generic [ref=e365]:
+              - generic [ref=e366]: "241"
+              - generic [ref=e368]: Carbs
+            - generic [ref=e369]:
+              - generic [ref=e370]: "50.1"
+              - generic [ref=e372]: Fat
+            - generic [ref=e373]:
+              - generic [ref=e374]: "150.3"
+              - generic [ref=e376]: Protein
+        - generic [ref=e377]:
+          - button "View" [ref=e378] [cursor=pointer]:
+            - img [ref=e379]
+            - text: View
+          - button "Edit" [ref=e382] [cursor=pointer]:
+            - img [ref=e383]
+            - text: Edit
+          - button "Delete" [ref=e386] [cursor=pointer]:
+            - img [ref=e387]
+            - text: Delete
+      - generic [ref=e391]:
+        - img "Honey Lemon Glazed Salmon" [ref=e393]
+        - generic [ref=e394]:
+          - heading "Honey Lemon Glazed Salmon" [level=2] [ref=e395]
+          - paragraph [ref=e396]: Bright and sticky salmon that works equally well for a weeknight dinner or a dinner party.
+          - generic [ref=e397]:
+            - generic [ref=e398]:
+              - generic [ref=e399]: "1609.1"
+              - generic [ref=e401]: Calories
+            - generic [ref=e402]:
+              - generic [ref=e403]: "50.7"
+              - generic [ref=e405]: Carbs
+            - generic [ref=e406]:
+              - generic [ref=e407]: "98.4"
+              - generic [ref=e409]: Fat
+            - generic [ref=e410]:
+              - generic [ref=e411]: "121.9"
+              - generic [ref=e413]: Protein
+        - generic [ref=e414]:
+          - button "View" [ref=e415] [cursor=pointer]:
+            - img [ref=e416]
+            - text: View
+          - button "Edit" [ref=e419] [cursor=pointer]:
+            - img [ref=e420]
+            - text: Edit
+          - button "Delete" [ref=e423] [cursor=pointer]:
+            - img [ref=e424]
+            - text: Delete
+      - generic [ref=e428]:
+        - generic [ref=e431]: 🍽
+        - generic [ref=e432]:
+          - heading "Vanilla Panna Cotta" [level=2] [ref=e433]
+          - paragraph [ref=e434]: Silky Italian panna cotta with a subtle vanilla flavour and honey glaze.
+          - generic [ref=e435]:
+            - generic [ref=e436]:
+              - generic [ref=e437]: "1734.5"
+              - generic [ref=e439]: Calories
+            - generic [ref=e440]:
+              - generic [ref=e441]: "92.9"
+              - generic [ref=e443]: Carbs
+            - generic [ref=e444]:
+              - generic [ref=e445]: "147.1"
+              - generic [ref=e447]: Fat
+            - generic [ref=e448]:
+              - generic [ref=e449]: "11"
+              - generic [ref=e451]: Protein
+        - generic [ref=e452]:
+          - button "View" [ref=e453] [cursor=pointer]:
+            - img [ref=e454]
+            - text: View
+          - button "Edit" [ref=e457] [cursor=pointer]:
+            - img [ref=e458]
+            - text: Edit
+          - button "Delete" [ref=e461] [cursor=pointer]:
+            - img [ref=e462]
+            - text: Delete
+      - generic [ref=e466]:
+        - img "Dark Chocolate Mousse" [ref=e468]
+        - generic [ref=e469]:
+          - heading "Dark Chocolate Mousse" [level=2] [ref=e470]
+          - paragraph [ref=e471]: Light, airy chocolate mousse made with just four ingredients. Chill for at least 2 hours.
+          - generic [ref=e472]:
+            - generic [ref=e473]:
+              - generic [ref=e474]: "2249.1"
+              - generic [ref=e476]: Calories
+            - generic [ref=e477]:
+              - generic [ref=e478]: "109.1"
+              - generic [ref=e480]: Carbs
+            - generic [ref=e481]:
+              - generic [ref=e482]: "187.4"
+              - generic [ref=e484]: Fat
+            - generic [ref=e485]:
+              - generic [ref=e486]: "36.8"
+              - generic [ref=e488]: Protein
+        - generic [ref=e489]:
+          - button "View" [ref=e490] [cursor=pointer]:
+            - img [ref=e491]
+            - text: View
+          - button "Edit" [ref=e494] [cursor=pointer]:
+            - img [ref=e495]
+            - text: Edit
+          - button "Delete" [ref=e498] [cursor=pointer]:
+            - img [ref=e499]
+            - text: Delete
+      - generic [ref=e503]:
+        - img "Cheesy Scrambled Eggs" [ref=e505]
+        - generic [ref=e506]:
+          - heading "Cheesy Scrambled Eggs" [level=2] [ref=e507]
+          - paragraph [ref=e508]: Slow-cooked, creamy scrambled eggs with melted cheddar — the best way to start any day.
+          - generic [ref=e509]:
+            - generic [ref=e510]:
+              - generic [ref=e511]: "502.7"
+              - generic [ref=e513]: Calories
+            - generic [ref=e514]:
+              - generic [ref=e515]: "3.1"
+              - generic [ref=e517]: Carbs
+            - generic [ref=e518]:
+              - generic [ref=e519]: "41.2"
+              - generic [ref=e521]: Fat
+            - generic [ref=e522]:
+              - generic [ref=e523]: "29.9"
+              - generic [ref=e525]: Protein
+        - generic [ref=e526]:
+          - button "View" [ref=e527] [cursor=pointer]:
+            - img [ref=e528]
+            - text: View
+          - button "Edit" [ref=e531] [cursor=pointer]:
+            - img [ref=e532]
+            - text: Edit
+          - button "Delete" [ref=e535] [cursor=pointer]:
+            - img [ref=e536]
+            - text: Delete
+      - generic [ref=e540]:
+        - img "Greek Yogurt Honey Bowl" [ref=e542]
+        - generic [ref=e543]:
+          - heading "Greek Yogurt Honey Bowl" [level=2] [ref=e544]
+          - paragraph [ref=e545]: A simple, protein-rich breakfast or snack bowl ready in 2 minutes.
+          - generic [ref=e546]:
+            - generic [ref=e547]:
+              - generic [ref=e548]: "287"
+              - generic [ref=e550]: Calories
+            - generic [ref=e551]:
+              - generic [ref=e552]: "33.9"
+              - generic [ref=e554]: Carbs
+            - generic [ref=e555]:
+              - generic [ref=e556]: "10.2"
+              - generic [ref=e558]: Fat
+            - generic [ref=e559]:
+              - generic [ref=e560]: "20.6"
+              - generic [ref=e562]: Protein
+        - generic [ref=e563]:
+          - button "View" [ref=e564] [cursor=pointer]:
+            - img [ref=e565]
+            - text: View
+          - button "Edit" [ref=e568] [cursor=pointer]:
+            - img [ref=e569]
+            - text: Edit
+          - button "Delete" [ref=e572] [cursor=pointer]:
+            - img [ref=e573]
+            - text: Delete
+      - generic [ref=e577]:
+        - img "Creamy Pasta Carbonara" [ref=e579]
+        - generic [ref=e580]:
+          - heading "Creamy Pasta Carbonara" [level=2] [ref=e581]
+          - paragraph [ref=e582]: The authentic Roman carbonara — no cream, just eggs, cheese, and technique.
+          - generic [ref=e583]:
+            - generic [ref=e584]:
+              - generic [ref=e585]: "1884.6"
+              - generic [ref=e587]: Calories
+            - generic [ref=e588]:
+              - generic [ref=e589]: "229.4"
+              - generic [ref=e591]: Carbs
+            - generic [ref=e592]:
+              - generic [ref=e593]: "67.7"
+              - generic [ref=e595]: Fat
+            - generic [ref=e596]:
+              - generic [ref=e597]: "86.7"
+              - generic [ref=e599]: Protein
+        - generic [ref=e600]:
+          - button "View" [ref=e601] [cursor=pointer]:
+            - img [ref=e602]
+            - text: View
+          - button "Edit" [ref=e605] [cursor=pointer]:
+            - img [ref=e606]
+            - text: Edit
+          - button "Delete" [ref=e609] [cursor=pointer]:
+            - img [ref=e610]
+            - text: Delete
+      - generic [ref=e614]:
+        - generic [ref=e617]: 🍽
+        - generic [ref=e618]:
+          - heading "Chocolate Lava Cake" [level=2] [ref=e619]
+          - paragraph [ref=e620]: Decadent individual chocolate cakes with a molten centre — best served immediately.
+          - generic [ref=e621]:
+            - generic [ref=e622]:
+              - generic [ref=e623]: "1848.6"
+              - generic [ref=e625]: Calories
+            - generic [ref=e626]:
+              - generic [ref=e627]: "139.9"
+              - generic [ref=e629]: Carbs
+            - generic [ref=e630]:
+              - generic [ref=e631]: "131.6"
+              - generic [ref=e633]: Fat
+            - generic [ref=e634]:
+              - generic [ref=e635]: "32.2"
+              - generic [ref=e637]: Protein
+        - generic [ref=e638]:
+          - button "View" [ref=e639] [cursor=pointer]:
+            - img [ref=e640]
+            - text: View
+          - button "Edit" [ref=e643] [cursor=pointer]:
+            - img [ref=e644]
+            - text: Edit
+          - button "Delete" [ref=e647] [cursor=pointer]:
+            - img [ref=e648]
+            - text: Delete
+      - generic [ref=e652]:
+        - img "Lemon Butter Salmon" [ref=e654]
+        - generic [ref=e655]:
+          - heading "Lemon Butter Salmon" [level=2] [ref=e656]
+          - paragraph [ref=e657]: Pan-seared salmon finished in a bright lemon-butter sauce — on the table in 15 minutes.
+          - generic [ref=e658]:
+            - generic [ref=e659]:
+              - generic [ref=e660]: "1374.3"
+              - generic [ref=e662]: Calories
+            - generic [ref=e663]:
+              - generic [ref=e664]: "14.2"
+              - generic [ref=e666]: Carbs
+            - generic [ref=e667]:
+              - generic [ref=e668]: "97.8"
+              - generic [ref=e670]: Fat
+            - generic [ref=e671]:
+              - generic [ref=e672]: "102.3"
+              - generic [ref=e674]: Protein
+        - generic [ref=e675]:
+          - button "View" [ref=e676] [cursor=pointer]:
+            - img [ref=e677]
+            - text: View
+          - button "Edit" [ref=e680] [cursor=pointer]:
+            - img [ref=e681]
+            - text: Edit
+          - button "Delete" [ref=e684] [cursor=pointer]:
+            - img [ref=e685]
+            - text: Delete
+      - generic [ref=e689]:
+        - img "Honey Garlic Chicken" [ref=e691]
+        - generic [ref=e692]:
+          - heading "Honey Garlic Chicken" [level=2] [ref=e693]
+          - paragraph [ref=e694]: Sticky, sweet-savory chicken that comes together in one pan in under 25 minutes.
+          - generic [ref=e695]:
+            - generic [ref=e696]:
+              - generic [ref=e697]: "1367.2"
+              - generic [ref=e699]: Calories
+            - generic [ref=e700]:
+              - generic [ref=e701]: "53.2"
+              - generic [ref=e703]: Carbs
+            - generic [ref=e704]:
+              - generic [ref=e705]: "44.1"
+              - generic [ref=e707]: Fat
+            - generic [ref=e708]:
+              - generic [ref=e709]: "186.8"
+              - generic [ref=e711]: Protein
+        - generic [ref=e712]:
+          - button "View" [ref=e713] [cursor=pointer]:
+            - img [ref=e714]
+            - text: View
+          - button "Edit" [ref=e717] [cursor=pointer]:
+            - img [ref=e718]
+            - text: Edit
+          - button "Delete" [ref=e721] [cursor=pointer]:
+            - img [ref=e722]
+            - text: Delete
+      - generic [ref=e726]:
+        - img "Spaghetti Aglio e Olio" [ref=e728]
+        - generic [ref=e729]:
+          - heading "Spaghetti Aglio e Olio" [level=2] [ref=e730]
+          - paragraph [ref=e731]: A Roman classic — just pasta, garlic, olive oil, and a little patience.
+          - generic [ref=e732]:
+            - generic [ref=e733]:
+              - generic [ref=e734]: "1699.8"
+              - generic [ref=e736]: Calories
+            - generic [ref=e737]:
+              - generic [ref=e738]: "233.2"
+              - generic [ref=e740]: Carbs
+            - generic [ref=e741]:
+              - generic [ref=e742]: "66.5"
+              - generic [ref=e744]: Fat
+            - generic [ref=e745]:
+              - generic [ref=e746]: "42.7"
+              - generic [ref=e748]: Protein
+        - generic [ref=e749]:
+          - button "View" [ref=e750] [cursor=pointer]:
+            - img [ref=e751]
+            - text: View
+          - button "Edit" [ref=e754] [cursor=pointer]:
+            - img [ref=e755]
+            - text: Edit
+          - button "Delete" [ref=e758] [cursor=pointer]:
+            - img [ref=e759]
+            - text: Delete
+      - generic [ref=e763]:
+        - img "Classic Pancakes" [ref=e765]
+        - generic [ref=e766]:
+          - heading "Classic Pancakes" [level=2] [ref=e767]
+          - paragraph [ref=e768]: Fluffy, golden pancakes perfect for a weekend breakfast.
+          - generic [ref=e769]:
+            - generic [ref=e770]:
+              - generic [ref=e771]: "1361.3"
+              - generic [ref=e773]: Calories
+            - generic [ref=e774]:
+              - generic [ref=e775]: "197.0"
+              - generic [ref=e777]: Carbs
+            - generic [ref=e778]:
+              - generic [ref=e779]: "43.5"
+              - generic [ref=e781]: Fat
+            - generic [ref=e782]:
+              - generic [ref=e783]: "40.1"
+              - generic [ref=e785]: Protein
+        - generic [ref=e786]:
+          - button "View" [ref=e787] [cursor=pointer]:
+            - img [ref=e788]
+            - text: View
+          - button "Edit" [ref=e791] [cursor=pointer]:
+            - img [ref=e792]
+            - text: Edit
+          - button "Delete" [ref=e795] [cursor=pointer]:
+            - img [ref=e796]
+            - text: Delete
+      - generic [ref=e800]:
+        - img "rec1" [ref=e802]
+        - heading "rec1" [level=2] [ref=e804]
+        - generic [ref=e805]:
+          - button "View" [ref=e806] [cursor=pointer]:
+            - img [ref=e807]
+            - text: View
+          - button "Edit" [ref=e810] [cursor=pointer]:
+            - img [ref=e811]
+            - text: Edit
+          - button "Delete" [ref=e814] [cursor=pointer]:
+            - img [ref=e815]
+            - text: Delete

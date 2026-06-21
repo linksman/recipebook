@@ -7,33 +7,33 @@
 }
 
 :root {
-  --brand:       #b84c28;
-  --brand-dark:  #8f3519;
-  --brand-light: #d97652;
-  --brand-xlight:#fdf0eb;
+  --brand:       #0d9488;
+  --brand-dark:  #0a7a6d;
+  --brand-light: #14b8a6;
+  --brand-xlight:#ccfbf1;
 
-  --bg:          #f3ede3;
-  --surface:     #fffdf8;
-  --border:      #e5d9ca;
-  --border-light:#f0e7db;
+  --bg:          #f0f4f8;
+  --surface:     #ffffff;
+  --border:      #e2e8f0;
+  --border-light:#f1f5f9;
 
-  --text:        #1c1209;
-  --text-muted:  #7a6253;
-  --text-light:  #a8927e;
+  --text:        #1e293b;
+  --text-muted:  #64748b;
+  --text-light:  #94a3b8;
 
-  --cal:  #c44b17;
-  --carb: #4d8567;
-  --fat:  #a67c15;
-  --prot: #3d6b4f;
+  --cal:  #ef4444;
+  --carb: #22c55e;
+  --fat:  #f59e0b;
+  --prot: #3b82f6;
 
   --danger:        #c0392b;
   --danger-bg:     #fef5f5;
   --danger-border: #f5c6c6;
 
-  --shadow-sm: 0 1px 3px rgba(30,18,9,.04);
-  --shadow:    0 2px 8px rgba(30,18,9,.07), 0 1px 2px rgba(30,18,9,.04);
-  --shadow-md: 0 6px 20px rgba(30,18,9,.09);
-  --shadow-lg: 0 14px 40px rgba(30,18,9,.13);
+  --shadow-sm: 0 1px 3px rgba(0,0,0,.04);
+  --shadow:    0 2px 8px rgba(0,0,0,.07), 0 1px 2px rgba(0,0,0,.04);
+  --shadow-md: 0 6px 20px rgba(0,0,0,.09);
+  --shadow-lg: 0 14px 40px rgba(0,0,0,.13);
 
   --radius-sm: 4px;
   --radius:    8px;
@@ -43,8 +43,6 @@
 body {
   font-family: 'Outfit', system-ui, sans-serif;
   background-color: var(--bg);
-  background-image: radial-gradient(circle, rgba(30,18,9,.042) 1px, transparent 1px);
-  background-size: 24px 24px;
   color: var(--text);
   font-size: 15px;
   line-height: 1.5;
@@ -53,7 +51,7 @@ body {
 }
 
 h1 {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Outfit', system-ui, sans-serif;
 }
 
 a  { color: inherit; text-decoration: none; }
