@@ -10,3 +10,5 @@
 [2026-06-21T08:20:01Z] failed again
 [2026-06-21T08:22:30Z] it crached after deploy : verror: Environment variable not found: DATABASE_URL.
 [2026-06-21T08:24:48Z] Error: P3019 The datasource provider `postgresql` specified in your schema does not match the one specified in the migration_lock.toml, `sqlite`. Please remove your current migration directory and start a new migration history with prisma migrate dev. Read more: https://pris.ly/d/migrate-provider-switch
+[2026-06-21T08:56:07Z] I don't see the UI is served from the app
+[2026-06-21T08:59:26Z] Error code: P1012 error: Error validating datasource `db`: the URL must start with the protocol `postgresql://` or `postgres://`.   -->  prisma/schema.prisma:7    |  6 |   provider = "postgresql"  7 |   url      = env("DATABASE_URL")    |  Validation Error Count: 1 [Context: getConfig]  Prisma CLI Version : 5.22.0

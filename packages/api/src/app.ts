@@ -31,11 +31,9 @@ export function createApp() {
   apiRouter.use('/recipes', recipesRouter);
   app.use('/api', apiRouter);
 
-  if (process.env.NODE_ENV === 'production') {
-    const webDist = path.join(__dirname, '../../web/dist');
-    app.use(express.static(webDist));
-    app.get('*', (_req, res) => res.sendFile(path.join(webDist, 'index.html')));
-  }
+  const webDist = path.join(__dirname, '../../web/dist');
+  app.use(express.static(webDist));
+  app.get('*', (_req, res) => res.sendFile(path.join(webDist, 'index.html')));
 
   return app;
 }
