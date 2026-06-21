@@ -1,0 +1,14 @@
+- generic [ref=e4]:
+  - generic [ref=e5]:
+    - generic [ref=e6]: 🍳
+    - heading "RecipeBook" [level=1] [ref=e7]
+    - paragraph [ref=e8]: Your personal recipe planner
+  - generic [ref=e9]:
+    - alert [ref=e17]: Invalid username or password
+    - generic [ref=e10]:
+      - generic [ref=e11]: Username
+      - textbox "Username" [ref=e12]: alice
+    - generic [ref=e13]:
+      - generic [ref=e14]: Password
+      - textbox "Password" [ref=e15]: password123
+    - button "Sign in" [ref=e16] [cursor=pointer]

@@ -10,6 +10,7 @@ function makeRecipe(overrides: Partial<Recipe> = {}): Recipe {
     id: '1',
     title: 'Test Recipe',
     description: 'A tasty dish',
+    imageUrl: null,
     createdAt: '2026-01-01T00:00:00Z',
     updatedAt: '2026-01-01T00:00:00Z',
     ingredients: [],

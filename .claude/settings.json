@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -r '\"[\\(now | todate)] \\(.prompt // \"\" | gsub(\"\\n\"; \" \"))\"' >> docs/prompt_log.txt 2>/dev/null || true"
+          }
+        ]
+      }
+    ]
+  }
+}

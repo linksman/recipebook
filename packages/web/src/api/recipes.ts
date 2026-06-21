@@ -17,6 +17,7 @@ export interface Recipe {
   id: string;
   title: string;
   description: string | null;
+  imageUrl: string | null;
   createdAt: string;
   updatedAt: string;
   ingredients: RecipeIngredientDetail[];
