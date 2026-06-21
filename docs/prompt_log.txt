@@ -8,3 +8,5 @@
 [2026-06-21T08:05:50Z] I can't add an sqlite. I'll go for the postgresql option
 [2026-06-21T08:17:43Z] can you connect to railways to see why the deploy failed? I'm deploying using github linkage
 [2026-06-21T08:20:01Z] failed again
+[2026-06-21T08:22:30Z] it crached after deploy : verror: Environment variable not found: DATABASE_URL.
+[2026-06-21T08:24:48Z] Error: P3019 The datasource provider `postgresql` specified in your schema does not match the one specified in the migration_lock.toml, `sqlite`. Please remove your current migration directory and start a new migration history with prisma migrate dev. Read more: https://pris.ly/d/migrate-provider-switch
